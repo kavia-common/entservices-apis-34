@@ -1,0 +1,1286 @@
+2026-02-10 09:12:19,132 - Knowledge - INFO - Created shared MongoDB connection pool
+2026-02-10 09:12:19,436 - Knowledge - INFO - Starting Knowledge Graph processing with 20 threads
+2026-02-10 09:12:19,580 - Knowledge - INFO - Initial configuration: chunk_size=65536, max_cache_size=500
+2026-02-10 09:12:19,733 - Knowledge - INFO - Knowledge Graph concurrency configuration: workers=20, max_batch_size=10, max_concurrent_llm_calls=50
+2026-02-10 09:12:21,281 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2026-02-10 09:12:21,466 - Knowledge - WARNING - ❌ load_from_redis method not found - Redis support not attached
+2026-02-10 09:12:21,646 - Knowledge - INFO - load persisted knowledge: begin
+2026-02-10 09:12:21,809 - Knowledge - INFO - Loaded 0 files from persisted knowledge
+2026-02-10 09:12:21,967 - Knowledge - INFO - load persisted knowledge: end
+2026-02-10 09:12:22,141 - Knowledge - WARNING - No persisted knowledge found. Files will be queued during start()
+2026-02-10 09:12:22,339 - Knowledge - INFO - Redis support added with prefix knowledge:b5100do:
+2026-02-10 09:12:22,897 - Knowledge - INFO - Starting knowledge initialization for ID: LEYjz4-b5100do
+2026-02-10 09:12:23,050 - Knowledge - INFO - 🔍 Checking Redis for build_id: b5100do
+2026-02-10 09:12:23,226 - Knowledge - INFO - 🔍 Full session ID: LEYjz4-b5100do
+2026-02-10 09:12:23,421 - Knowledge - INFO - 🔍 Redis prefix will be: knowledge:b5100do:
+2026-02-10 09:12:23,614 - Knowledge - INFO - 🔍 Using attached load_from_redis() method
+2026-02-10 09:12:23,768 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2026-02-10 09:12:23,943 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b5100do
+2026-02-10 09:12:24,106 - Knowledge - WARNING - ❌ No Redis cache found
+2026-02-10 09:12:24,280 - Knowledge - INFO - 📁 Loading knowledge from disk...
+2026-02-10 09:12:24,529 - Knowledge - INFO - load persisted docinfo: begin
+2026-02-10 09:12:24,687 - Knowledge - INFO - load persisted docinfo: end
+2026-02-10 09:12:24,850 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2026-02-10 09:12:25,007 - Knowledge - INFO - ✅ load_from_redis method found - attempting Redis load
+2026-02-10 09:12:25,160 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2026-02-10 09:12:25,336 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b5100do
+2026-02-10 09:12:25,534 - Knowledge - WARNING - ❌ No Redis cache found
+2026-02-10 09:12:25,700 - Knowledge - INFO - ❌ Redis load returned False - falling back to file loading
+2026-02-10 09:12:25,871 - Knowledge - INFO - load persisted knowledge: begin
+2026-02-10 09:12:26,074 - Knowledge - INFO - Loaded 0 files from persisted knowledge
+2026-02-10 09:12:26,275 - Knowledge - INFO - load persisted knowledge: end
+2026-02-10 09:12:26,438 - Knowledge - INFO - 📁 Disk load complete in 1.96s
+2026-02-10 09:12:26,616 - Knowledge - INFO - Populating ingest queue with source files...
+2026-02-10 09:12:27,012 - Knowledge - INFO - Added 272 files from /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34 to ingest queue
+2026-02-10 09:12:27,182 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 160, Duration: 0ms
+2026-02-10 09:12:27,339 - Knowledge - INFO - Worker kw1 created using shared MongoDB connection pool
+2026-02-10 09:12:27,496 - Knowledge - INFO - knowledge worker kw1 start
+2026-02-10 09:12:27,497 - Knowledge - INFO - Worker kw2 created using shared MongoDB connection pool
+2026-02-10 09:12:27,678 - Knowledge - INFO - [kw1] Queue=272, InProgress=0, PendingWorkers=0/1, Completed=0/272 (0.0%)
+2026-02-10 09:12:27,774 - Knowledge - INFO - knowledge worker kw2 start
+2026-02-10 09:12:27,774 - Knowledge - INFO - Worker kw3 created using shared MongoDB connection pool
+2026-02-10 09:12:27,876 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=272, active_workers=0/2
+2026-02-10 09:12:27,997 - Knowledge - INFO - [kw2] Queue=272, InProgress=0, PendingWorkers=0/2, Completed=0/272 (0.0%)
+2026-02-10 09:12:28,117 - Knowledge - INFO - knowledge worker kw3 start
+2026-02-10 09:12:28,117 - Knowledge - INFO - Worker kw4 created using shared MongoDB connection pool
+2026-02-10 09:12:28,232 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/CMakeLists.txt
+2026-02-10 09:12:28,313 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=272, active_workers=1/3
+2026-02-10 09:12:28,424 - Knowledge - INFO - [kw3] Queue=266, InProgress=0, PendingWorkers=1/3, Completed=0/272 (0.0%)
+2026-02-10 09:12:28,509 - Knowledge - INFO - knowledge worker kw4 start
+2026-02-10 09:12:28,510 - Knowledge - INFO - Worker kw5 created using shared MongoDB connection pool
+2026-02-10 09:12:28,591 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/CMakeLists.txt (ext=.txt, size=3636)
+2026-02-10 09:12:28,660 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/SystemAudioPlayer/SystemAudioPlayer.json
+2026-02-10 09:12:28,732 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=266, active_workers=2/4
+2026-02-10 09:12:28,812 - Knowledge - INFO - [kw4] Queue=260, InProgress=0, PendingWorkers=2/4, Completed=0/272 (0.0%)
+2026-02-10 09:12:28,882 - Knowledge - INFO - knowledge worker kw5 start
+2026-02-10 09:12:28,882 - Knowledge - INFO - Worker kw6 created using shared MongoDB connection pool
+2026-02-10 09:12:28,965 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/generate_md.py
+2026-02-10 09:12:29,035 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/SystemAudioPlayer/SystemAudioPlayer.json (ext=.json, size=18954)
+2026-02-10 09:12:29,158 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/DTV/DTV.json
+2026-02-10 09:12:29,269 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=260, active_workers=3/5
+2026-02-10 09:12:29,384 - Knowledge - INFO - [kw5] Queue=254, InProgress=0, PendingWorkers=3/5, Completed=0/272 (0.0%)
+2026-02-10 09:12:29,460 - Knowledge - INFO - knowledge worker kw6 start
+2026-02-10 09:12:29,461 - Knowledge - INFO - Worker kw7 created using shared MongoDB connection pool
+2026-02-10 09:12:29,531 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/TextToSpeech/TextToSpeech.json
+2026-02-10 09:12:29,610 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/SystemAudioPlayer/SystemAudioPlayerPlugin.json
+2026-02-10 09:12:29,680 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/DTV/DTV.json (ext=.json, size=50010)
+2026-02-10 09:12:29,834 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/RDKShell/RDKShellPlugin.json
+2026-02-10 09:12:29,901 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=254, active_workers=4/6
+2026-02-10 09:12:30,039 - Knowledge - INFO - [kw6] Queue=248, InProgress=0, PendingWorkers=4/6, Completed=0/272 (0.0%)
+2026-02-10 09:12:30,191 - Knowledge - INFO - knowledge worker kw7 start
+2026-02-10 09:12:30,192 - Knowledge - INFO - Worker kw8 created using shared MongoDB connection pool
+2026-02-10 09:12:30,275 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/TextToSpeech/TextToSpeech.json (ext=.json, size=26374)
+2026-02-10 09:12:30,351 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/SystemAudioPlayer/SystemAudioPlayerPlugin.json (ext=.json, size=750)
+2026-02-10 09:12:30,444 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/DTV/DTVPlugin.json
+2026-02-10 09:12:30,562 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/RDKShell/RDKShellPlugin.json (ext=.json, size=499)
+2026-02-10 09:12:30,643 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/RemoteControl/RemoteControlPlugin.json
+2026-02-10 09:12:30,726 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=248, active_workers=5/7
+2026-02-10 09:12:30,807 - Knowledge - INFO - [kw7] Queue=242, InProgress=0, PendingWorkers=5/7, Completed=0/272 (0.0%)
+2026-02-10 09:12:30,923 - Knowledge - INFO - knowledge worker kw8 start
+2026-02-10 09:12:30,924 - Knowledge - INFO - Worker kw9 created using shared MongoDB connection pool
+2026-02-10 09:12:31,019 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/TextToSpeech/TextToSpeechPlugin.json
+2026-02-10 09:12:31,085 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Bluetooth/Bluetooth.json
+2026-02-10 09:12:31,158 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/DTV/DTVPlugin.json (ext=.json, size=419)
+2026-02-10 09:12:31,224 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/RDKShell/RDKShell.json
+2026-02-10 09:12:31,316 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/RemoteControl/RemoteControlPlugin.json (ext=.json, size=511)
+2026-02-10 09:12:31,397 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/DisplaySettings/DisplaySettingsPlugin.json
+2026-02-10 09:12:31,518 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=242, active_workers=6/8
+2026-02-10 09:12:31,633 - Knowledge - INFO - [kw8] Queue=236, InProgress=0, PendingWorkers=6/8, Completed=0/272 (0.0%)
+2026-02-10 09:12:31,714 - Knowledge - INFO - knowledge worker kw9 start
+2026-02-10 09:12:31,715 - Knowledge - INFO - Worker kw10 created using shared MongoDB connection pool
+2026-02-10 09:12:31,789 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/TextToSpeech/TextToSpeechPlugin.json (ext=.json, size=547)
+2026-02-10 09:12:31,900 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Bluetooth/Bluetooth.json (ext=.json, size=53644)
+2026-02-10 09:12:31,994 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/MaintenanceManager/MaintenanceManager.json
+2026-02-10 09:12:32,076 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/RDKShell/RDKShell.json (ext=.json, size=89222)
+2026-02-10 09:12:32,153 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/RemoteControl/RemoteControl.json
+2026-02-10 09:12:32,287 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/DisplaySettings/DisplaySettingsPlugin.json (ext=.json, size=605)
+2026-02-10 09:12:32,366 - Knowledge - INFO - Worker kw7 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/schemas/interface.schema.json
+2026-02-10 09:12:32,458 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=236, active_workers=7/9
+2026-02-10 09:12:32,535 - Knowledge - INFO - [kw9] Queue=230, InProgress=0, PendingWorkers=7/9, Completed=0/272 (0.0%)
+2026-02-10 09:12:32,633 - Knowledge - INFO - knowledge worker kw10 start
+2026-02-10 09:12:32,633 - Knowledge - INFO - Worker kw11 created using shared MongoDB connection pool
+2026-02-10 09:12:32,734 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Monitor/Monitor.json
+2026-02-10 09:12:32,815 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Bluetooth/BluetoothPlugin.json
+2026-02-10 09:12:32,896 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/MaintenanceManager/MaintenanceManager.json (ext=.json, size=9148)
+2026-02-10 09:12:32,965 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/PerformanceMetrics/PerformanceMetricsPlugin.json
+2026-02-10 09:12:33,067 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/RemoteControl/RemoteControl.json (ext=.json, size=38193)
+2026-02-10 09:12:33,156 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/DisplaySettings/DisplaySettings.json
+2026-02-10 09:12:33,232 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/schemas/interface.schema.json (ext=.json, size=8197)
+2026-02-10 09:12:33,319 - Knowledge - INFO - Worker kw8 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/update_sidebar.py
+2026-02-10 09:12:33,433 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=230, active_workers=8/10
+2026-02-10 09:12:33,512 - Knowledge - INFO - [kw10] Queue=224, InProgress=0, PendingWorkers=8/10, Completed=0/272 (0.0%)
+2026-02-10 09:12:33,591 - Knowledge - INFO - knowledge worker kw11 start
+2026-02-10 09:12:33,591 - Knowledge - INFO - Worker kw12 created using shared MongoDB connection pool
+2026-02-10 09:12:33,685 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Monitor/Monitor.json (ext=.json, size=8145)
+2026-02-10 09:12:33,766 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Bluetooth/BluetoothPlugin.json (ext=.json, size=514)
+2026-02-10 09:12:33,853 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/MaintenanceManager/MaintenanceManagerPlugin.json
+2026-02-10 09:12:33,948 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/PerformanceMetrics/PerformanceMetricsPlugin.json (ext=.json, size=462)
+2026-02-10 09:12:34,035 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/ResourceManager/ResourceManagerPlugin.json
+2026-02-10 09:12:34,141 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/DisplaySettings/DisplaySettings.json (ext=.json, size=101411)
+2026-02-10 09:12:34,239 - Knowledge - INFO - Worker kw7 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/schemas/plugin.schema.json
+2026-02-10 09:12:34,333 - Knowledge - INFO - Worker kw8 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/generate_md_incremental.py
+2026-02-10 09:12:34,422 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/logger.py
+2026-02-10 09:12:34,494 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=224, active_workers=9/11
+2026-02-10 09:12:34,574 - Knowledge - INFO - [kw11] Queue=218, InProgress=0, PendingWorkers=9/11, Completed=0/272 (0.0%)
+2026-02-10 09:12:34,653 - Knowledge - INFO - knowledge worker kw12 start
+2026-02-10 09:12:34,654 - Knowledge - INFO - Worker kw13 created using shared MongoDB connection pool
+2026-02-10 09:12:34,738 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Monitor/MonitorPlugin.json
+2026-02-10 09:12:34,867 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Packager/Packager.json
+2026-02-10 09:12:34,944 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/MaintenanceManager/MaintenanceManagerPlugin.json (ext=.json, size=550)
+2026-02-10 09:12:35,039 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/common/common.json
+2026-02-10 09:12:35,142 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/ResourceManager/ResourceManagerPlugin.json (ext=.json, size=518)
+2026-02-10 09:12:35,223 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/VoiceControl/VoiceControlPlugin.json
+2026-02-10 09:12:35,307 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/schemas/plugin.schema.json (ext=.json, size=5211)
+2026-02-10 09:12:35,399 - Knowledge - INFO - Worker kw8 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/markdown_templates.py
+2026-02-10 09:12:35,472 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/_sidebar.md
+2026-02-10 09:12:35,594 - Knowledge - INFO - Worker kw10 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/NetflixPlugin.md
+2026-02-10 09:12:35,672 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=218, active_workers=10/12
+2026-02-10 09:12:35,785 - Knowledge - INFO - [kw12] Queue=212, InProgress=0, PendingWorkers=10/12, Completed=0/272 (0.0%)
+2026-02-10 09:12:35,864 - Knowledge - INFO - knowledge worker kw13 start
+2026-02-10 09:12:35,864 - Knowledge - INFO - Worker kw14 created using shared MongoDB connection pool
+2026-02-10 09:12:35,950 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Monitor/MonitorPlugin.json (ext=.json, size=487)
+2026-02-10 09:12:36,050 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Packager/Packager.json (ext=.json, size=2365)
+2026-02-10 09:12:36,131 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/SystemServices/SystemPlugin.json
+2026-02-10 09:12:36,231 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/common/common.json (ext=.json, size=5519)
+2026-02-10 09:12:36,343 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/ResourceManager/ResourceManager.json
+2026-02-10 09:12:36,437 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/VoiceControl/VoiceControlPlugin.json (ext=.json, size=477)
+2026-02-10 09:12:36,556 - Knowledge - INFO - Worker kw7 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/docs_common.json
+2026-02-10 09:12:36,639 - Knowledge - INFO - Worker kw8 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/generate_md_from_header.py
+2026-02-10 09:12:36,744 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/_sidebar.md (ext=.md, size=2917)
+2026-02-10 09:12:36,855 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/NetflixPlugin.md (ext=.md, size=8967)
+2026-02-10 09:12:36,940 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/BluetoothPlugin.md
+2026-02-10 09:12:37,029 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=212, active_workers=11/13
+2026-02-10 09:12:37,113 - Knowledge - INFO - [kw13] Queue=206, InProgress=0, PendingWorkers=11/13, Completed=0/272 (0.0%)
+2026-02-10 09:12:37,207 - Knowledge - INFO - knowledge worker kw14 start
+2026-02-10 09:12:37,207 - Knowledge - INFO - Worker kw15 created using shared MongoDB connection pool
+2026-02-10 09:12:37,374 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Packager/PackagerPlugin.json
+2026-02-10 09:12:37,458 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/SystemServices/SystemPlugin.json (ext=.json, size=515)
+2026-02-10 09:12:37,540 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/MotionDetection/MotionDetectionPlugin.json
+2026-02-10 09:12:37,660 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/ResourceManager/ResourceManager.json (ext=.json, size=3707)
+2026-02-10 09:12:37,772 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/VoiceControl/VoiceControl.json
+2026-02-10 09:12:37,844 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/docs_common.json (ext=.json, size=1694)
+2026-02-10 09:12:37,917 - Knowledge - INFO - Worker kw8 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/README.md
+2026-02-10 09:12:38,012 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/_coverpage.md
+2026-02-10 09:12:38,118 - Knowledge - INFO - Worker kw10 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/SystemModePlugin.md
+2026-02-10 09:12:38,206 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/BluetoothPlugin.md (ext=.md, size=50299)
+2026-02-10 09:12:38,484 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/HdmiCecSourcePlugin.md
+2026-02-10 09:12:38,561 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=206, active_workers=12/14
+2026-02-10 09:12:38,652 - Knowledge - INFO - [kw14] Queue=200, InProgress=0, PendingWorkers=12/14, Completed=0/272 (0.0%)
+2026-02-10 09:12:38,728 - Knowledge - INFO - knowledge worker kw15 start
+2026-02-10 09:12:38,729 - Knowledge - INFO - Worker kw16 created using shared MongoDB connection pool
+2026-02-10 09:12:38,805 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Packager/PackagerPlugin.json (ext=.json, size=514)
+2026-02-10 09:12:38,882 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/SystemServices/System.json
+2026-02-10 09:12:38,967 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/MotionDetection/MotionDetectionPlugin.json (ext=.json, size=536)
+2026-02-10 09:12:39,062 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/LinearPlaybackControl/LinearPlaybackControlPlugin.json
+2026-02-10 09:12:39,168 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/VoiceControl/VoiceControl.json (ext=.json, size=30265)
+2026-02-10 09:12:39,270 - Knowledge - INFO - Worker kw7 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/Log.py
+2026-02-10 09:12:39,381 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/README.md (ext=.md, size=21061)
+2026-02-10 09:12:39,464 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/_coverpage.md (ext=.md, size=247)
+2026-02-10 09:12:39,577 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/SystemModePlugin.md (ext=.md, size=3366)
+2026-02-10 09:12:39,671 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MessageControlPlugin.md
+2026-02-10 09:12:39,790 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/HdmiCecSourcePlugin.md (ext=.md, size=18396)
+2026-02-10 09:12:39,911 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/AppManagerPlugin.md
+2026-02-10 09:12:39,981 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=200, active_workers=13/15
+2026-02-10 09:12:40,069 - Knowledge - INFO - [kw15] Queue=194, InProgress=0, PendingWorkers=13/15, Completed=0/272 (0.0%)
+2026-02-10 09:12:40,163 - Knowledge - INFO - knowledge worker kw16 start
+2026-02-10 09:12:40,163 - Knowledge - INFO - Worker kw17 created using shared MongoDB connection pool
+2026-02-10 09:12:40,245 - Knowledge - INFO - Processing batch of 6 files
+2026-02-10 09:12:40,336 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/SystemServices/System.json (ext=.json, size=60390)
+2026-02-10 09:12:40,423 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/MotionDetection/MotionDetection.json
+2026-02-10 09:12:40,495 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/LinearPlaybackControl/LinearPlaybackControlPlugin.json (ext=.json, size=436)
+2026-02-10 09:12:40,588 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/OpenCDMi/OpenCDMiPlugin.json
+2026-02-10 09:12:40,677 - Knowledge - INFO - Worker kw7 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/global.json
+2026-02-10 09:12:40,765 - Knowledge - INFO - Worker kw8 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/header_file_parser.py
+2026-02-10 09:12:40,891 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/HdmiCecSinkPlugin.md
+2026-02-10 09:12:40,977 - Knowledge - INFO - Worker kw10 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/WebKitBrowserPlugin.md
+2026-02-10 09:12:41,092 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MessageControlPlugin.md (ext=.md, size=6674)
+2026-02-10 09:12:41,178 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DTVPlugin.md
+2026-02-10 09:12:41,275 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/AppManagerPlugin.md (ext=.md, size=23260)
+2026-02-10 09:12:41,367 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PowerManagerPlugin.md
+2026-02-10 09:12:41,483 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=194, active_workers=14/16
+2026-02-10 09:12:41,560 - Knowledge - INFO - [kw16] Queue=189, InProgress=0, PendingWorkers=14/16, Completed=6/272 (2.2%)
+2026-02-10 09:12:41,636 - Knowledge - INFO - knowledge worker kw17 start
+2026-02-10 09:12:41,636 - Knowledge - INFO - Worker kw18 created using shared MongoDB connection pool
+2026-02-10 09:12:41,716 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/SystemAudioPlayer/SystemAudioPlayer.json
+2026-02-10 09:12:41,788 - Knowledge - INFO - Processing batch of 6 files
+2026-02-10 09:12:41,878 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/MotionDetection/MotionDetection.json (ext=.json, size=22159)
+2026-02-10 09:12:41,948 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/LinearPlaybackControl/LinearPlaybackControl.json
+2026-02-10 09:12:42,035 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/OpenCDMi/OpenCDMiPlugin.json (ext=.json, size=2817)
+2026-02-10 09:12:42,119 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/global.json (ext=.json, size=911)
+2026-02-10 09:12:42,199 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/update_sidebar.py (small file (2410 bytes))
+2026-02-10 09:12:42,321 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/HdmiCecSinkPlugin.md (ext=.md, size=42881)
+2026-02-10 09:12:42,371 - Knowledge - INFO - [LLM_CALL] Completed: generate_md.py:chunk1, Duration: 5085ms, PromptTokens: 3212, CompletionTokens: 422, Cost: $0.00049
+2026-02-10 09:12:42,405 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/WebKitBrowserPlugin.md (ext=.md, size=20378)
+2026-02-10 09:12:42,492 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MaintenanceManagerPlugin.md
+2026-02-10 09:12:42,585 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DTVPlugin.md (ext=.md, size=68303)
+2026-02-10 09:12:42,656 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/SharedStoragePlugin.md
+2026-02-10 09:12:42,739 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PowerManagerPlugin.md (ext=.md, size=29179)
+2026-02-10 09:12:42,901 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=189, active_workers=15/17
+2026-02-10 09:12:43,024 - Knowledge - INFO - [kw17] Queue=184, InProgress=0, PendingWorkers=15/17, Completed=12/272 (4.4%)
+2026-02-10 09:12:43,102 - Knowledge - INFO - knowledge worker kw18 start
+2026-02-10 09:12:43,102 - Knowledge - INFO - Worker kw19 created using shared MongoDB connection pool
+2026-02-10 09:12:43,199 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/SystemAudioPlayer/SystemAudioPlayerPlugin.json
+2026-02-10 09:12:43,305 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/DTV/DTV.json
+2026-02-10 09:12:43,527 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/LinearPlaybackControl/LinearPlaybackControl.json (ext=.json, size=9659)
+2026-02-10 09:12:43,608 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/OpenCDMi/OpenCDMi.json
+2026-02-10 09:12:43,711 - Knowledge - INFO - Worker kw7 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/generator_json.py
+2026-02-10 09:12:43,870 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DisplayInfoPlugin.md
+2026-02-10 09:12:43,963 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/generate_md.py
+2026-02-10 09:12:43,964 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/TextToSpeechPlugin.md
+2026-02-10 09:12:43,964 - Knowledge - INFO - Processing batch of 6 files
+2026-02-10 09:12:44,063 - Knowledge - INFO - Worker kw10 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DeviceIdentificationPlugin.md
+2026-02-10 09:12:44,168 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MaintenanceManagerPlugin.md (ext=.md, size=11072)
+2026-02-10 09:12:44,254 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/RDKWindowManagerPlugin.md
+2026-02-10 09:12:44,368 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/SharedStoragePlugin.md (ext=.md, size=14443)
+2026-02-10 09:12:44,462 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/StorageManagerPlugin.md
+2026-02-10 09:12:44,540 - Knowledge - INFO - Worker kw16 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/LinearPlaybackControlPlugin.md
+2026-02-10 09:12:44,640 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=184, active_workers=16/18
+2026-02-10 09:12:44,712 - Knowledge - INFO - [kw18] Queue=179, InProgress=0, PendingWorkers=16/18, Completed=18/272 (6.6%)
+2026-02-10 09:12:44,834 - Knowledge - INFO - knowledge worker kw19 start
+2026-02-10 09:12:44,834 - Knowledge - INFO - Worker kw20 created using shared MongoDB connection pool
+2026-02-10 09:12:44,935 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Bluetooth/Bluetooth.json
+2026-02-10 09:12:45,004 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/DTV/DTVPlugin.json
+2026-02-10 09:12:45,086 - Knowledge - INFO - Processing batch of 6 files
+2026-02-10 09:12:45,189 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/OpenCDMi/OpenCDMi.json (ext=.json, size=2107)
+2026-02-10 09:12:45,309 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/generator_json.py (ext=.py, size=130707)
+2026-02-10 09:12:45,385 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DisplayInfoPlugin.md (ext=.md, size=16858)
+2026-02-10 09:12:45,502 - Knowledge - INFO - Processing batch of 6 files
+2026-02-10 09:12:45,555 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/TextToSpeechPlugin.md (ext=.md, size=25304)
+2026-02-10 09:12:45,632 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/RDKShell/RDKShellPlugin.json
+2026-02-10 09:12:45,714 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DeviceIdentificationPlugin.md (ext=.md, size=2562)
+2026-02-10 09:12:45,784 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PersistentStorePlugin.md
+2026-02-10 09:12:45,857 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/RDKWindowManagerPlugin.md (ext=.md, size=26970)
+2026-02-10 09:12:45,926 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PackageDownloader.md
+2026-02-10 09:12:46,012 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/StorageManagerPlugin.md (ext=.md, size=4006)
+2026-02-10 09:12:46,089 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/LinearPlaybackControlPlugin.md (ext=.md, size=9935)
+2026-02-10 09:12:46,158 - Knowledge - INFO - Worker kw17 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/FrameRatePlugin.md
+2026-02-10 09:12:46,263 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=179, active_workers=17/19
+2026-02-10 09:12:46,332 - Knowledge - INFO - [kw19] Queue=174, InProgress=0, PendingWorkers=17/19, Completed=30/272 (11.0%)
+2026-02-10 09:12:46,398 - Knowledge - INFO - knowledge worker kw20 start
+2026-02-10 09:12:46,471 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Bluetooth/BluetoothPlugin.json
+2026-02-10 09:12:46,547 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/MaintenanceManager/MaintenanceManager.json
+2026-02-10 09:12:46,633 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/RemoteControl/RemoteControlPlugin.json
+2026-02-10 09:12:46,717 - Knowledge - INFO - Processing batch of 6 files
+2026-02-10 09:12:46,878 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/USBDevicePlugin.md
+2026-02-10 09:12:46,976 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/CMakeLists.txt
+2026-02-10 09:12:47,074 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/ResourceManagerPlugin.md
+2026-02-10 09:12:47,183 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/RDKShell/RDKShell.json
+2026-02-10 09:12:47,254 - Knowledge - INFO - Worker kw10 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/LEDControlPlugin.md
+2026-02-10 09:12:47,341 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PersistentStorePlugin.md (ext=.md, size=14464)
+2026-02-10 09:12:47,442 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/ScreenCapturePlugin.md
+2026-02-10 09:12:47,570 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PackageDownloader.md (ext=.md, size=9158)
+2026-02-10 09:12:47,679 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/UserSettingsPlugin.md
+2026-02-10 09:12:47,794 - Knowledge - INFO - Worker kw16 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/LifecycleManagerPlugin.md
+2026-02-10 09:12:47,868 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/FrameRatePlugin.md (ext=.md, size=10773)
+2026-02-10 09:12:47,958 - Knowledge - INFO - Worker kw18 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MotionDetectionPlugin.md
+2026-02-10 09:12:48,031 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=174, active_workers=18/20
+2026-02-10 09:12:48,111 - Knowledge - INFO - [kw20] Queue=169, InProgress=0, PendingWorkers=18/20, Completed=36/272 (13.2%)
+2026-02-10 09:12:48,173 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Packager/Packager.json
+2026-02-10 09:12:48,271 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/MaintenanceManager/MaintenanceManagerPlugin.json
+2026-02-10 09:12:48,345 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/RemoteControl/RemoteControl.json
+2026-02-10 09:12:48,469 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/DisplaySettings/DisplaySettingsPlugin.json
+2026-02-10 09:12:48,580 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/USBDevicePlugin.md (ext=.md, size=11748)
+2026-02-10 09:12:48,680 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/generate_md.py
+2026-02-10 09:12:48,824 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/ResourceManagerPlugin.md (ext=.md, size=5184)
+2026-02-10 09:12:48,905 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/PerformanceMetrics/PerformanceMetricsPlugin.json
+2026-02-10 09:12:49,034 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/LEDControlPlugin.md (ext=.md, size=4494)
+2026-02-10 09:12:49,110 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PackagerPlugin.md
+2026-02-10 09:12:49,198 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/ScreenCapturePlugin.md (ext=.md, size=4358)
+2026-02-10 09:12:49,299 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DeviceDiagnosticsPlugin.md
+2026-02-10 09:12:49,394 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/UserSettingsPlugin.md (ext=.md, size=46659)
+2026-02-10 09:12:49,480 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/LifecycleManagerPlugin.md (ext=.md, size=6296)
+2026-02-10 09:12:49,584 - Knowledge - INFO - Worker kw17 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DisplaySettingsPlugin.md
+2026-02-10 09:12:49,769 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MotionDetectionPlugin.md (ext=.md, size=19642)
+2026-02-10 09:12:49,843 - Knowledge - INFO - Worker kw19 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/FrontPanelPlugin.md
+2026-02-10 09:12:50,002 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=169, active_workers=19/20
+2026-02-10 09:12:50,137 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Packager/PackagerPlugin.json
+2026-02-10 09:12:50,305 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/SystemServices/SystemPlugin.json
+2026-02-10 09:12:50,442 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/ResourceManager/ResourceManagerPlugin.json
+2026-02-10 09:12:50,565 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/DisplaySettings/DisplaySettings.json
+2026-02-10 09:12:50,679 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/logger.py (small file (2498 bytes))
+2026-02-10 09:12:50,744 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/TextToSpeech/TextToSpeech.json
+2026-02-10 09:12:50,775 - Knowledge - INFO - [LLM_CALL] Completed: markdown_templates.py:chunk1, Duration: 5995ms, PromptTokens: 8890, CompletionTokens: 279, Cost: $0.00100
+2026-02-10 09:12:50,823 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/XCastPlugin.md
+2026-02-10 09:12:50,939 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/common/common.json
+2026-02-10 09:12:51,022 - Knowledge - INFO - Worker kw10 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/RemoteActionMappingPlugin.md
+2026-02-10 09:12:51,095 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PackagerPlugin.md (ext=.md, size=3443)
+2026-02-10 09:12:51,171 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/SystemAudioPlayerPlugin.md
+2026-02-10 09:12:51,299 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DeviceDiagnosticsPlugin.md (ext=.md, size=7498)
+2026-02-10 09:12:51,395 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/FirmwareUpdatePlugin.md
+2026-02-10 09:12:51,491 - Knowledge - INFO - Worker kw16 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PackageInstaller.md
+2026-02-10 09:12:51,582 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DisplaySettingsPlugin.md (ext=.md, size=112575)
+2026-02-10 09:12:51,690 - Knowledge - INFO - Worker kw18 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/SystemPlugin.md
+2026-02-10 09:12:51,807 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/FrontPanelPlugin.md (ext=.md, size=9196)
+2026-02-10 09:12:52,055 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/SystemServices/System.json
+2026-02-10 09:12:52,163 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/ResourceManager/ResourceManager.json
+2026-02-10 09:12:52,283 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/VoiceControl/VoiceControlPlugin.json
+2026-02-10 09:12:52,428 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/TextToSpeech/TextToSpeechPlugin.json
+2026-02-10 09:12:52,490 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/markdown_templates.py
+2026-02-10 09:12:52,490 - Knowledge - INFO - Worker kw20 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/homepage.md
+2026-02-10 09:12:52,490 - Knowledge - INFO - [LLM_CALL] Completed: Log.py:chunk1, Duration: 5693ms, PromptTokens: 2760, CompletionTokens: 488, Cost: $0.00047
+2026-02-10 09:12:52,579 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/XCastPlugin.md (ext=.md, size=26306)
+2026-02-10 09:12:52,657 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/MotionDetection/MotionDetectionPlugin.json
+2026-02-10 09:12:52,759 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/RemoteActionMappingPlugin.md (ext=.md, size=17212)
+2026-02-10 09:12:52,832 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/OCIContainerPlugin.md
+2026-02-10 09:12:52,908 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/SystemAudioPlayerPlugin.md (ext=.md, size=20195)
+2026-02-10 09:12:52,977 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MonitorPlugin.md
+2026-02-10 09:12:53,074 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/FirmwareUpdatePlugin.md (ext=.md, size=6934)
+2026-02-10 09:12:53,158 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PackageInstaller.md (ext=.md, size=10287)
+2026-02-10 09:12:53,267 - Knowledge - INFO - Worker kw17 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/AVInputPlugin.md
+2026-02-10 09:12:53,339 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/SystemPlugin.md (ext=.md, size=92710)
+2026-02-10 09:12:53,457 - Knowledge - INFO - Worker kw19 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PlayerInfoPlugin.md
+2026-02-10 09:12:53,616 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/LinearPlaybackControl/LinearPlaybackControlPlugin.json
+2026-02-10 09:12:53,753 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/VoiceControl/VoiceControl.json
+2026-02-10 09:12:53,828 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Monitor/Monitor.json
+2026-02-10 09:12:54,021 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/homepage.md (ext=.md, size=870)
+2026-02-10 09:12:54,189 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/Log.py
+2026-02-10 09:12:54,316 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/USBMassStoragePlugin.md
+2026-02-10 09:12:54,420 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 289, Duration: 0ms
+2026-02-10 09:12:54,430 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/MotionDetection/MotionDetection.json
+2026-02-10 09:12:54,889 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DeviceInfoPlugin.md
+2026-02-10 09:12:54,891 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/OCIContainerPlugin.md (ext=.md, size=26734)
+2026-02-10 09:12:55,013 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MonitorPlugin.md (ext=.md, size=12022)
+2026-02-10 09:12:55,119 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/HdcpProfilePlugin.md
+2026-02-10 09:12:55,218 - Knowledge - INFO - Worker kw16 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/TelemetryPlugin.md
+2026-02-10 09:12:55,301 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/AVInputPlugin.md (ext=.md, size=32086)
+2026-02-10 09:12:55,374 - Knowledge - INFO - Worker kw18 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MiracastServicePlugin.md
+2026-02-10 09:12:55,456 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PlayerInfoPlugin.md (ext=.md, size=9795)
+2026-02-10 09:12:55,534 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/LinearPlaybackControl/LinearPlaybackControl.json
+2026-02-10 09:12:55,606 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/OpenCDMi/OpenCDMiPlugin.json
+2026-02-10 09:12:55,696 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/Monitor/MonitorPlugin.json
+2026-02-10 09:12:55,818 - Knowledge - INFO - Worker kw20 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MiracastPlayer.md
+2026-02-10 09:12:55,980 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/USBMassStoragePlugin.md (ext=.md, size=8690)
+2026-02-10 09:12:56,058 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 1638ms
+2026-02-10 09:12:56,245 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DeviceInfoPlugin.md (ext=.md, size=22901)
+2026-02-10 09:12:56,450 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/AnalyticsPlugin.md
+2026-02-10 09:12:56,523 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/HdcpProfilePlugin.md (ext=.md, size=6445)
+2026-02-10 09:12:56,603 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/TelemetryPlugin.md (ext=.md, size=7879)
+2026-02-10 09:12:56,687 - Knowledge - INFO - Worker kw17 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/VoiceControlPlugin.md
+2026-02-10 09:12:56,811 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MiracastServicePlugin.md (ext=.md, size=12236)
+2026-02-10 09:12:56,900 - Knowledge - INFO - Worker kw19 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PerformanceMetricsPlugin.md
+2026-02-10 09:12:57,059 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json/OpenCDMi/OpenCDMi.json
+2026-02-10 09:12:57,208 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MiracastPlayer.md (ext=.md, size=13557)
+2026-02-10 09:12:57,282 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/WarehousePlugin.md
+2026-02-10 09:12:57,385 - Knowledge - INFO - Progress: 13.6% | Files: 58/272 | Rate: 1.65 files/sec | Queue: 159
+2026-02-10 09:12:57,386 - Knowledge - INFO - Processing batch of 6 files
+2026-02-10 09:12:57,386 - Knowledge - INFO - [LLM_CALL] Completed: generate_md_incremental.py:chunk1, Duration: 13422ms, PromptTokens: 6030, CompletionTokens: 443, Cost: $0.00078
+2026-02-10 09:12:57,582 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/AnalyticsPlugin.md (ext=.md, size=4058)
+2026-02-10 09:12:57,730 - Knowledge - INFO - Worker kw16 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/HomeKitTVPlugin.md
+2026-02-10 09:12:57,800 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/VoiceControlPlugin.md (ext=.md, size=26237)
+2026-02-10 09:12:57,909 - Knowledge - INFO - Worker kw18 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/RemoteControlPlugin.md
+2026-02-10 09:12:58,019 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PerformanceMetricsPlugin.md (ext=.md, size=1236)
+2026-02-10 09:12:58,168 - Knowledge - INFO - Worker kw20 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/NetflixPlugin.md
+2026-02-10 09:12:58,246 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/WarehousePlugin.md (ext=.md, size=9581)
+2026-02-10 09:12:58,382 - Knowledge - INFO - [kw2] Queue=159, InProgress=0, PendingWorkers=20/20, Completed=69/272 (25.4%)
+2026-02-10 09:12:58,466 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/NetflixPlugin.md
+2026-02-10 09:12:58,558 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/generate_md_incremental.py
+2026-02-10 09:12:58,559 - Knowledge - INFO - Processing batch of 6 files
+2026-02-10 09:12:58,559 - Knowledge - INFO - Processing batch of 6 files
+2026-02-10 09:12:58,560 - Knowledge - INFO - [kw3] Queue=159, InProgress=0, PendingWorkers=20/20, Completed=69/272 (25.4%)
+2026-02-10 09:12:58,561 - Knowledge - INFO - Processing batch of 6 files
+2026-02-10 09:12:58,561 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:12:58,562 - Knowledge - INFO - [kw1] Queue=159, InProgress=0, PendingWorkers=20/20, Completed=69/272 (25.4%)
+2026-02-10 09:12:58,563 - Knowledge - INFO - [kw5] Queue=159, InProgress=0, PendingWorkers=20/20, Completed=69/272 (25.4%)
+2026-02-10 09:12:58,563 - Knowledge - INFO - [kw6] Queue=159, InProgress=0, PendingWorkers=20/20, Completed=69/272 (25.4%)
+2026-02-10 09:12:58,563 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 289, Duration: 0ms
+2026-02-10 09:12:58,770 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/HomeKitTVPlugin.md (ext=.md, size=11964)
+2026-02-10 09:12:58,861 - Knowledge - INFO - Worker kw17 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/OpenCDMiPlugin.md
+2026-02-10 09:12:58,971 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/RemoteControlPlugin.md (ext=.md, size=30499)
+2026-02-10 09:12:59,075 - Knowledge - INFO - Worker kw19 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/UserPreferencesPlugin.md
+2026-02-10 09:12:59,158 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/NetflixPlugin.md (ext=.md, size=8967)
+2026-02-10 09:12:59,329 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=159, active_workers=20/20
+2026-02-10 09:12:59,419 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/SystemModePlugin.md
+2026-02-10 09:12:59,768 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/logger.py
+2026-02-10 09:12:59,896 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/BluetoothPlugin.md
+2026-02-10 09:13:00,015 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=159, active_workers=20/20
+2026-02-10 09:13:00,101 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/HdmiCecSourcePlugin.md
+2026-02-10 09:13:00,221 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PowerManagerPlugin.md
+2026-02-10 09:13:00,298 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=159, active_workers=20/20
+2026-02-10 09:13:00,394 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=159, active_workers=20/20
+2026-02-10 09:13:00,471 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=159, active_workers=20/20
+2026-02-10 09:13:00,552 - Knowledge - INFO - Processing batch of 6 files
+2026-02-10 09:13:00,552 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:00,552 - Knowledge - INFO - [LLM_CALL] Completed: generate_md_from_header.py:chunk1, Duration: 15007ms, PromptTokens: 4330, CompletionTokens: 678, Cost: $0.00070
+2026-02-10 09:13:00,746 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/OpenCDMiPlugin.md (ext=.md, size=3992)
+2026-02-10 09:13:00,842 - Knowledge - INFO - Worker kw18 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/RDKShellPlugin.md
+2026-02-10 09:13:00,952 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/UserPreferencesPlugin.md (ext=.md, size=3592)
+2026-02-10 09:13:01,036 - Knowledge - INFO - Worker kw20 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/FrontPanel.md
+2026-02-10 09:13:01,249 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/WebKitBrowserPlugin.md
+2026-02-10 09:13:01,339 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/_sidebar.md
+2026-02-10 09:13:01,452 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MessageControlPlugin.md
+2026-02-10 09:13:01,644 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DTVPlugin.md
+2026-02-10 09:13:01,727 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/StorageManagerPlugin.md
+2026-02-10 09:13:02,096 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/AppManagerPlugin.md
+2026-02-10 09:13:02,175 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/TextToSpeechPlugin.md
+2026-02-10 09:13:02,256 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/generate_md_from_header.py
+2026-02-10 09:13:02,256 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 3694ms
+2026-02-10 09:13:02,464 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/RDKShellPlugin.md (ext=.md, size=95488)
+2026-02-10 09:13:02,543 - Knowledge - INFO - Worker kw19 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MiracastPlayerPlugin.md
+2026-02-10 09:13:02,655 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/FrontPanel.md (ext=.md, size=9735)
+2026-02-10 09:13:02,760 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DeviceIdentificationPlugin.md
+2026-02-10 09:13:02,836 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/_coverpage.md
+2026-02-10 09:13:02,961 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MaintenanceManagerPlugin.md
+2026-02-10 09:13:03,049 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/RDKWindowManagerPlugin.md
+2026-02-10 09:13:03,152 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/UserSettingsPlugin.md
+2026-02-10 09:13:03,232 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/SharedStoragePlugin.md
+2026-02-10 09:13:03,305 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/ResourceManagerPlugin.md
+2026-02-10 09:13:03,583 - Knowledge - INFO - Progress: 25.4% | Files: 92/272 | Rate: 2.33 files/sec | Queue: 134
+2026-02-10 09:13:03,589 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:03,857 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-02-10 09:13:03,858 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-02-10 09:13:03,858 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-02-10 09:13:03,858 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-02-10 09:13:03,858 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-02-10 09:13:03,859 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:03,859 - Knowledge - INFO - Processing batch of 6 files
+2026-02-10 09:13:03,941 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:04,372 - Knowledge - INFO - Worker kw20 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PlayerInfo.md
+2026-02-10 09:13:04,400 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MiracastPlayerPlugin.md (ext=.md, size=23348)
+2026-02-10 09:13:05,252 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/LEDControlPlugin.md
+2026-02-10 09:13:05,407 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/HdmiCecSinkPlugin.md
+2026-02-10 09:13:05,502 - Knowledge - INFO - [LLM_CALL] Completed: header_file_parser.py:chunk1, Duration: 19124ms, PromptTokens: 23006, CompletionTokens: 1579, Cost: $0.00293
+2026-02-10 09:13:05,534 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PersistentStorePlugin.md
+2026-02-10 09:13:05,605 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/ScreenCapturePlugin.md
+2026-02-10 09:13:05,682 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/FirmwareUpdatePlugin.md
+2026-02-10 09:13:05,751 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PackageDownloader.md
+2026-02-10 09:13:05,846 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/XCastPlugin.md
+2026-02-10 09:13:05,916 - Knowledge - INFO - [kw4] Queue=134, InProgress=0, PendingWorkers=20/20, Completed=97/272 (35.7%)
+2026-02-10 09:13:06,022 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/LinearPlaybackControlPlugin.md
+2026-02-10 09:13:06,112 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PreinstallManager.md
+2026-02-10 09:13:06,223 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DTVPlugin.md
+2026-02-10 09:13:06,296 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PackageManager.md
+2026-02-10 09:13:06,373 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/USBMassStorage.md
+2026-02-10 09:13:06,466 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/ResourceManagerPlugin.md
+2026-02-10 09:13:06,541 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/FrameRatePlugin.md
+2026-02-10 09:13:06,661 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/schemas/interface.schema.json
+2026-02-10 09:13:06,778 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MotionDetectionPlugin.md
+2026-02-10 09:13:06,845 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PlayerInfo.md (ext=.md, size=9248)
+2026-02-10 09:13:06,983 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/RemoteActionMappingPlugin.md
+2026-02-10 09:13:07,050 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DisplayInfoPlugin.md
+2026-02-10 09:13:07,139 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/header_file_parser.py
+2026-02-10 09:13:07,139 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:07,219 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PackagerPlugin.md
+2026-02-10 09:13:07,314 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/SystemAudioPlayerPlugin.md
+2026-02-10 09:13:07,429 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/HdcpProfilePlugin.md
+2026-02-10 09:13:07,549 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DeviceDiagnosticsPlugin.md
+2026-02-10 09:13:07,630 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/USBMassStoragePlugin.md
+2026-02-10 09:13:07,711 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=134, active_workers=20/20
+2026-02-10 09:13:08,040 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/LifecycleManagerPlugin.md
+2026-02-10 09:13:08,125 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PreinstallManager.md (ext=.md, size=3922)
+2026-02-10 09:13:08,197 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DTVPlugin.md (ext=.md, size=68303)
+2026-02-10 09:13:08,311 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PackageManager.md (ext=.md, size=36257)
+2026-02-10 09:13:08,395 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/USBMassStorage.md (ext=.md, size=9629)
+2026-02-10 09:13:08,466 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/ResourceManagerPlugin.md (ext=.md, size=5184)
+2026-02-10 09:13:08,542 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DisplaySettingsPlugin.md
+2026-02-10 09:13:08,619 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/schemas/plugin.schema.json
+2026-02-10 09:13:08,681 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/SystemPlugin.md
+2026-02-10 09:13:08,768 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:08,972 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/USBDevicePlugin.md
+2026-02-10 09:13:09,148 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/FrontPanelPlugin.md
+2026-02-10 09:13:09,177 - Knowledge - INFO - Processing batch of 6 files
+2026-02-10 09:13:09,235 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/OCIContainerPlugin.md
+2026-02-10 09:13:09,318 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/DeviceInfoPlugin.md
+2026-02-10 09:13:09,456 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 292, Duration: 0ms
+2026-02-10 09:13:09,538 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MonitorPlugin.md
+2026-02-10 09:13:09,625 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/WarehousePlugin.md
+2026-02-10 09:13:09,785 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PackageInstaller.md
+2026-02-10 09:13:09,822 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/BluetoothPlugin.md
+2026-02-10 09:13:09,899 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/AmazonPrime.md
+2026-02-10 09:13:09,984 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MonitorPlugin.md
+2026-02-10 09:13:10,102 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/AppGateway.md
+2026-02-10 09:13:10,188 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DisplayInfo.md
+2026-02-10 09:13:10,287 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/AVInputPlugin.md
+2026-02-10 09:13:10,378 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/docs_common.json
+2026-02-10 09:13:10,491 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MiracastServicePlugin.md
+2026-02-10 09:13:10,573 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/homepage.md
+2026-02-10 09:13:10,725 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PlayerInfoPlugin.md
+2026-02-10 09:13:10,805 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/update_sidebar.py
+2026-02-10 09:13:11,039 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-02-10 09:13:11,039 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 1582ms
+2026-02-10 09:13:11,294 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/AnalyticsPlugin.md
+2026-02-10 09:13:11,379 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/BluetoothPlugin.md (ext=.md, size=50299)
+2026-02-10 09:13:11,448 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/TelemetryPlugin.md
+2026-02-10 09:13:11,509 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/AmazonPrime.md (ext=.md, size=6118)
+2026-02-10 09:13:11,629 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MonitorPlugin.md (ext=.md, size=12022)
+2026-02-10 09:13:11,700 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/AppGateway.md (ext=.md, size=2547)
+2026-02-10 09:13:11,787 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DisplayInfo.md (ext=.md, size=20312)
+2026-02-10 09:13:12,024 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/VoiceControlPlugin.md
+2026-02-10 09:13:12,092 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/Log.py
+2026-02-10 09:13:12,092 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/RemoteControlPlugin.md
+2026-02-10 09:13:12,159 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MiracastPlayer.md
+2026-02-10 09:13:12,225 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/PerformanceMetricsPlugin.md
+2026-02-10 09:13:12,293 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/generate_md_incremental.py
+2026-02-10 09:13:12,366 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/USBDevice.md
+2026-02-10 09:13:12,437 - Knowledge - INFO - Progress: 41.5% | Files: 113/272 | Rate: 2.25 files/sec | Queue: 129
+2026-02-10 09:13:12,438 - Knowledge - INFO - [kw14] Queue=129, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:12,438 - Knowledge - INFO - [kw15] Queue=129, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:12,438 - Knowledge - INFO - [kw9] Queue=129, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:12,439 - Knowledge - INFO - [kw12] Queue=129, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:12,439 - Knowledge - INFO - [kw11] Queue=129, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:12,616 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MiracastService.md
+2026-02-10 09:13:12,697 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/HomeKitTVPlugin.md
+2026-02-10 09:13:12,807 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DownloadManager.md
+2026-02-10 09:13:12,871 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/FrameRate.md
+2026-02-10 09:13:12,972 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/SystemAudioPlayerPlugin.md
+2026-02-10 09:13:13,025 - Knowledge - INFO - [kw13] Queue=129, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:13,077 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/HdmiCecSink.md
+2026-02-10 09:13:13,148 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/OpenCDMiPlugin.md
+2026-02-10 09:13:13,214 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/global.json
+2026-02-10 09:13:13,317 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/RDKShellPlugin.md
+2026-02-10 09:13:13,443 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/NetflixPlugin.md
+2026-02-10 09:13:13,519 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/UserPreferencesPlugin.md
+2026-02-10 09:13:13,640 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/markdown_templates.py
+2026-02-10 09:13:13,733 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/USBDevice.md (ext=.md, size=12619)
+2026-02-10 09:13:13,801 - Knowledge - INFO - [kw10] Queue=129, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:13,925 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=129, active_workers=20/20
+2026-02-10 09:13:13,995 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=129, active_workers=20/20
+2026-02-10 09:13:14,106 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=129, active_workers=20/20
+2026-02-10 09:13:14,181 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=129, active_workers=20/20
+2026-02-10 09:13:14,283 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=129, active_workers=20/20
+2026-02-10 09:13:14,401 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MiracastService.md (ext=.md, size=12293)
+2026-02-10 09:13:14,565 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DownloadManager.md (ext=.md, size=11439)
+2026-02-10 09:13:14,644 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/FrameRate.md (ext=.md, size=11074)
+2026-02-10 09:13:14,734 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/SystemAudioPlayerPlugin.md (ext=.md, size=20195)
+2026-02-10 09:13:14,833 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=129, active_workers=20/20
+2026-02-10 09:13:14,893 - Knowledge - INFO - [kw16] Queue=129, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:14,903 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/HdmiCecSink.md (ext=.md, size=43992)
+2026-02-10 09:13:15,088 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/json2md/generator_json.py
+2026-02-10 09:13:15,296 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/FrontPanel.md
+2026-02-10 09:13:15,418 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis_legacy/MiracastPlayerPlugin.md
+2026-02-10 09:13:15,473 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/HomeKitTVPlugin.md
+2026-02-10 09:13:15,486 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/generate_md_from_header.py
+2026-02-10 09:13:15,542 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=129, active_workers=20/20
+2026-02-10 09:13:15,619 - Knowledge - INFO - [kw17] Queue=129, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:15,689 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:15,726 - Knowledge - INFO - [kw18] Queue=124, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:15,760 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:15,847 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-02-10 09:13:15,932 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-02-10 09:13:16,014 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-02-10 09:13:16,098 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MaintenanceManagerPlugin.md
+2026-02-10 09:13:16,173 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/XCast.md
+2026-02-10 09:13:16,254 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/AVInput.md
+2026-02-10 09:13:16,341 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/LifecycleManager.md
+2026-02-10 09:13:16,427 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-02-10 09:13:16,544 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=129, active_workers=20/20
+2026-02-10 09:13:16,647 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/LinearPlaybackControlPlugin.md
+2026-02-10 09:13:16,923 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PlayerInfo.md
+2026-02-10 09:13:17,001 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/HomeKitTVPlugin.md (ext=.md, size=11964)
+2026-02-10 09:13:17,188 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/README.md
+2026-02-10 09:13:17,248 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-02-10 09:13:17,267 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=129, active_workers=20/20
+2026-02-10 09:13:17,341 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/LEDControl.md
+2026-02-10 09:13:17,414 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=124, active_workers=20/20
+2026-02-10 09:13:17,502 - Knowledge - INFO - [kw7] Queue=94, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:17,522 - Knowledge - INFO - [kw19] Queue=94, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:17,530 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/OpenCDMiPlugin.md
+2026-02-10 09:13:17,608 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/SystemPlugin.md
+2026-02-10 09:13:17,719 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DeviceInfo.md
+2026-02-10 09:13:17,819 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PerformanceMetricsPlugin.md
+2026-02-10 09:13:17,892 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MaintenanceManagerPlugin.md (ext=.md, size=11072)
+2026-02-10 09:13:17,965 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/XCast.md (ext=.md, size=24454)
+2026-02-10 09:13:18,046 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/AVInput.md (ext=.md, size=32564)
+2026-02-10 09:13:18,137 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/LifecycleManager.md (ext=.md, size=6350)
+2026-02-10 09:13:18,215 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/HdcpProfile.md
+2026-02-10 09:13:18,290 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:18,361 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/LinearPlaybackControlPlugin.md (ext=.md, size=9935)
+2026-02-10 09:13:18,526 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/WebKitBrowser.md
+2026-02-10 09:13:18,683 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/tools/md_generator/h2md/header_file_parser.py
+2026-02-10 09:13:18,706 - Knowledge - INFO - Worker kw10 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/overview/arch.md
+2026-02-10 09:13:18,785 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:18,871 - Knowledge - INFO - [kw20] Queue=84, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:18,891 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/LEDControl.md (ext=.md, size=5080)
+2026-02-10 09:13:18,974 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:19,064 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=94, active_workers=20/20
+2026-02-10 09:13:19,146 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=94, active_workers=20/20
+2026-02-10 09:13:19,230 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/OpenCDMiPlugin.md (ext=.md, size=3992)
+2026-02-10 09:13:19,354 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/SystemPlugin.md (ext=.md, size=58405)
+2026-02-10 09:13:19,473 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DeviceInfo.md (ext=.md, size=28812)
+2026-02-10 09:13:19,556 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PerformanceMetricsPlugin.md (ext=.md, size=1236)
+2026-02-10 09:13:19,632 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PackagerPlugin.md
+2026-02-10 09:13:19,691 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/Warehouse.md
+2026-02-10 09:13:19,803 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/TextToSpeechPlugin.md
+2026-02-10 09:13:19,888 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/Telemetry.md
+2026-02-10 09:13:19,970 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/HdcpProfile.md (ext=.md, size=6543)
+2026-02-10 09:13:20,043 - Knowledge - INFO - Worker kw16 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/TextToSpeech/ITextToSpeech.h
+2026-02-10 09:13:20,145 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/TextTrack.md
+2026-02-10 09:13:20,229 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/WebKitBrowser.md (ext=.md, size=30331)
+2026-02-10 09:13:20,420 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/overview/arch.md (ext=.md, size=62)
+2026-02-10 09:13:20,506 - Knowledge - INFO - Worker kw17 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Monitor/Monitor.json
+2026-02-10 09:13:20,587 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=84, active_workers=20/20
+2026-02-10 09:13:20,654 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MessageControl.md
+2026-02-10 09:13:20,736 - Knowledge - INFO - Worker kw18 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/NativeJS/INativeJS.h
+2026-02-10 09:13:20,843 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-02-10 09:13:20,869 - Knowledge - INFO - [kw8] Queue=75, InProgress=0, PendingWorkers=20/20, Completed=113/272 (41.5%)
+2026-02-10 09:13:20,884 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:20,977 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/OCIContainer.md
+2026-02-10 09:13:21,072 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/NativeJS.md
+2026-02-10 09:13:21,161 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/RemoteControlPlugin.md
+2026-02-10 09:13:21,259 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PowerManager.md
+2026-02-10 09:13:21,357 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PackagerPlugin.md (ext=.md, size=3443)
+2026-02-10 09:13:21,435 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/Warehouse.md (ext=.md, size=8874)
+2026-02-10 09:13:21,516 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/TextToSpeechPlugin.md (ext=.md, size=25304)
+2026-02-10 09:13:21,626 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/Telemetry.md (ext=.md, size=7967)
+2026-02-10 09:13:21,700 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/README.md
+2026-02-10 09:13:21,786 - Knowledge - INFO - Worker kw16 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HdcpProfile/IHdcpProfile.h
+2026-02-10 09:13:21,854 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/TextTrack.md (ext=.md, size=53044)
+2026-02-10 09:13:21,917 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/SystemMode.md
+2026-02-10 09:13:22,010 - Knowledge - INFO - Worker kw10 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/overview/intro.md
+2026-02-10 09:13:22,091 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Monitor/Monitor.json (ext=.json, size=5729)
+2026-02-10 09:13:22,160 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:22,242 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MessageControl.md (ext=.md, size=4389)
+2026-02-10 09:13:22,333 - Knowledge - INFO - Worker kw18 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/RDKWindowManager/IRDKWindowManager.h
+2026-02-10 09:13:22,421 - Knowledge - INFO - Worker kw7 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/SharedStorage/ISharedStorage.h
+2026-02-10 09:13:22,496 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=75, active_workers=20/20
+2026-02-10 09:13:22,569 - Knowledge - INFO - Worker kw19 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DisplayInfo/IConfiguration.h
+2026-02-10 09:13:22,654 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/OCIContainer.md (ext=.md, size=23750)
+2026-02-10 09:13:22,733 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/NativeJS.md (ext=.md, size=6418)
+2026-02-10 09:13:22,812 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/RemoteControlPlugin.md (ext=.md, size=39441)
+2026-02-10 09:13:22,892 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PowerManager.md (ext=.md, size=29157)
+2026-02-10 09:13:22,962 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-02-10 09:13:23,082 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-02-10 09:13:23,179 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-02-10 09:13:23,297 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-02-10 09:13:23,404 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/README.md (ext=.md, size=627)
+2026-02-10 09:13:23,486 - Knowledge - INFO - Worker kw16 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PowerManager/IPowerManager.h
+2026-02-10 09:13:23,575 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-02-10 09:13:23,663 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/SystemMode.md (ext=.md, size=6060)
+2026-02-10 09:13:23,740 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/overview/intro.md (ext=.md, size=975)
+2026-02-10 09:13:23,834 - Knowledge - INFO - Worker kw17 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DeviceDiagnostics/IDeviceDiagnostics.h
+2026-02-10 09:13:23,950 - Knowledge - INFO - Worker kw20 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/IMemory.h
+2026-02-10 09:13:24,031 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DisplaySettingsPlugin.md
+2026-02-10 09:13:24,135 - Knowledge - INFO - Worker kw18 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Module.h
+2026-02-10 09:13:24,215 - Knowledge - INFO - Worker kw7 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/TelemetryMetrics/ITelemetryMetrics.h
+2026-02-10 09:13:24,324 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-02-10 09:13:24,443 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DisplayInfo/IConfiguration.h (ext=.h, size=995)
+2026-02-10 09:13:24,522 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/HdmiCecSource.md
+2026-02-10 09:13:24,630 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/ScreenCapture.md
+2026-02-10 09:13:24,698 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/RDKShellPlugin.md
+2026-02-10 09:13:24,784 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/FirmwareUpdate.md
+2026-02-10 09:13:24,860 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:24,941 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:25,025 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:25,138 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:25,209 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/index.html
+2026-02-10 09:13:25,288 - Knowledge - INFO - Worker kw16 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/GoogleCast/IGoogleCast.h
+2026-02-10 09:13:25,356 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:25,436 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/Migration.md
+2026-02-10 09:13:25,549 - Knowledge - INFO - Worker kw10 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/FirmwareUpdate/IFirmwareUpdate.h
+2026-02-10 09:13:25,641 - Knowledge - INFO - Worker kw17 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Analytics/IAnalytics.h
+2026-02-10 09:13:25,736 - Knowledge - INFO - Worker kw20 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/Browser.json
+2026-02-10 09:13:25,819 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DisplaySettingsPlugin.md (ext=.md, size=112575)
+2026-02-10 09:13:25,882 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Module.h (ext=.h, size=1341)
+2026-02-10 09:13:25,977 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/TelemetryMetrics/ITelemetryMetrics.h (ext=.h, size=1794)
+2026-02-10 09:13:26,072 - Knowledge - INFO - Worker kw8 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/IBrowser.h
+2026-02-10 09:13:26,159 - Knowledge - INFO - Worker kw19 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HdmiCecSink/IHdmiCecSink.h
+2026-02-10 09:13:26,229 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/HdmiCecSource.md (ext=.md, size=19411)
+2026-02-10 09:13:26,315 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/ScreenCapture.md (ext=.md, size=5361)
+2026-02-10 09:13:26,396 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/RDKShellPlugin.md (ext=.md, size=95488)
+2026-02-10 09:13:26,489 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/FirmwareUpdate.md (ext=.md, size=6958)
+2026-02-10 09:13:26,564 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PreinstallManager.md
+2026-02-10 09:13:26,649 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DTVPlugin.md
+2026-02-10 09:13:26,727 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PackageManager.md
+2026-02-10 09:13:26,800 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/USBMassStorage.md
+2026-02-10 09:13:26,874 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/overview/_sidebar.md
+2026-02-10 09:13:26,961 - Knowledge - INFO - Worker kw16 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/entservices_errorcodes.h
+2026-02-10 09:13:27,030 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/ResourceManagerPlugin.md
+2026-02-10 09:13:27,126 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/Migration.md (ext=.md, size=4244)
+2026-02-10 09:13:27,200 - Knowledge - INFO - Worker kw10 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/UserSettings/IUserSettings.h
+2026-02-10 09:13:27,279 - Knowledge - INFO - Worker kw17 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/SystemAudioPlayer/ISystemAudioPlayer.h
+2026-02-10 09:13:27,351 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/Browser.json (ext=.json, size=3094)
+2026-02-10 09:13:27,428 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/VoiceControlPlugin.md
+2026-02-10 09:13:27,511 - Knowledge - INFO - Worker kw18 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DeviceInfo/IDeviceInfo.h
+2026-02-10 09:13:27,585 - Knowledge - INFO - Worker kw7 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DisplayInfo/DisplayInfo.json
+2026-02-10 09:13:27,670 - Knowledge - INFO - Worker kw8 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/CookieJar.json
+2026-02-10 09:13:27,767 - Knowledge - INFO - Worker kw19 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/StateControl/StateControl.json
+2026-02-10 09:13:27,861 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/RDKWindowManager.md
+2026-02-10 09:13:27,968 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/AppManager.md
+2026-02-10 09:13:28,076 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/Analytics.md
+2026-02-10 09:13:28,160 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/StorageManager.md
+2026-02-10 09:13:28,258 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/BluetoothPlugin.md
+2026-02-10 09:13:28,321 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/AmazonPrime.md
+2026-02-10 09:13:28,389 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MonitorPlugin.md
+2026-02-10 09:13:28,473 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/AppGateway.md
+2026-02-10 09:13:28,561 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/overview/_sidebar.md (ext=.md, size=309)
+2026-02-10 09:13:28,661 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/entservices_errorcodes.h (ext=.h, size=1663)
+2026-02-10 09:13:28,757 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DisplayInfo.md
+2026-02-10 09:13:28,828 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-02-10 09:13:28,912 - Knowledge - INFO - Worker kw10 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/StorageManager/IStorageManager.h
+2026-02-10 09:13:29,029 - Knowledge - INFO - Worker kw17 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/ScreenCapture/IScreenCapture.h
+2026-02-10 09:13:29,109 - Knowledge - INFO - Worker kw20 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/WebKitBrowser.json
+2026-02-10 09:13:29,174 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/VoiceControlPlugin.md (ext=.md, size=26377)
+2026-02-10 09:13:29,272 - Knowledge - INFO - Worker kw18 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AppManager/IAppManager.h
+2026-02-10 09:13:29,346 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DisplayInfo/DisplayInfo.json (ext=.json, size=2352)
+2026-02-10 09:13:29,417 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/CookieJar.json (ext=.json, size=915)
+2026-02-10 09:13:29,501 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/StateControl/StateControl.json (ext=.json, size=948)
+2026-02-10 09:13:29,586 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/RDKWindowManager.md (ext=.md, size=30420)
+2026-02-10 09:13:29,659 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/AppManager.md (ext=.md, size=26488)
+2026-02-10 09:13:29,772 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/Analytics.md (ext=.md, size=3469)
+2026-02-10 09:13:29,873 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/StorageManager.md (ext=.md, size=3705)
+2026-02-10 09:13:29,949 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MiracastService.md
+2026-02-10 09:13:30,046 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DownloadManager.md
+2026-02-10 09:13:30,148 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/FrameRate.md
+2026-02-10 09:13:30,268 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/SystemAudioPlayerPlugin.md
+2026-02-10 09:13:30,377 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/overview/aat.md
+2026-02-10 09:13:30,451 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:13:30,542 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/HdmiCecSink.md
+2026-02-10 09:13:30,617 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:30,707 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-02-10 09:13:30,814 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:13:30,884 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/WebKitBrowser.json (ext=.json, size=2644)
+2026-02-10 09:13:30,966 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PersistentStore.md
+2026-02-10 09:13:31,036 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:13:31,110 - Knowledge - INFO - Worker kw7 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DisplayInfo/IDisplayInfo.h
+2026-02-10 09:13:31,200 - Knowledge - INFO - Worker kw8 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Migration/IMigration.h
+2026-02-10 09:13:31,273 - Knowledge - INFO - Worker kw19 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DeviceIdentification/DeviceIdentification.json
+2026-02-10 09:13:31,354 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MotionDetectionPlugin.md
+2026-02-10 09:13:31,447 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/SharedStorage.md
+2026-02-10 09:13:31,518 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DeviceDiagnostics.md
+2026-02-10 09:13:31,596 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/UserSettings.md
+2026-02-10 09:13:31,711 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MaintenanceManagerPlugin.md
+2026-02-10 09:13:31,801 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/XCast.md
+2026-02-10 09:13:31,883 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/AVInput.md
+2026-02-10 09:13:31,970 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/LifecycleManager.md
+2026-02-10 09:13:32,071 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/overview/aat.md (ext=.md, size=1734)
+2026-02-10 09:13:32,279 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/LinearPlaybackControlPlugin.md
+2026-02-10 09:13:32,341 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/USBDevice.md
+2026-02-10 09:13:32,613 - Knowledge - INFO - Worker kw20 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/IApplication.h
+2026-02-10 09:13:32,693 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PersistentStore.md (ext=.md, size=6738)
+2026-02-10 09:13:32,763 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/NativeJS/INativeJS.h (small file (2629 bytes))
+2026-02-10 09:13:32,954 - Knowledge - INFO - Worker kw8 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/SystemMode/IDeviceOptimizeStateActivator.h
+2026-02-10 09:13:33,026 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DeviceIdentification/DeviceIdentification.json (ext=.json, size=1015)
+2026-02-10 09:13:33,103 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MotionDetectionPlugin.md (ext=.md, size=19642)
+2026-02-10 09:13:33,206 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/SharedStorage.md (ext=.md, size=14487)
+2026-02-10 09:13:33,283 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DeviceDiagnostics.md (ext=.md, size=7028)
+2026-02-10 09:13:33,381 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/UserSettings.md (ext=.md, size=55941)
+2026-02-10 09:13:33,507 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PackagerPlugin.md
+2026-02-10 09:13:33,616 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/Warehouse.md
+2026-02-10 09:13:33,690 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/TextToSpeechPlugin.md
+2026-02-10 09:13:33,802 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/Telemetry.md
+2026-02-10 09:13:33,877 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-02-10 09:13:33,945 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/TextTrack.md
+2026-02-10 09:13:34,030 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/HomeKitTVPlugin.md
+2026-02-10 09:13:34,134 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:13:34,244 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:13:34,421 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/SystemMode/IDeviceOptimizeStateActivator.h (ext=.h, size=1334)
+2026-02-10 09:13:34,498 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:13:34,591 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:13:34,665 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-02-10 09:13:34,741 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-02-10 09:13:34,831 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-02-10 09:13:35,301 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/index.html (small file (2493 bytes))
+2026-02-10 09:13:35,554 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/IMemory.h (small file (2050 bytes))
+2026-02-10 09:13:35,740 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Analytics/IAnalytics.h (small file (2416 bytes))
+2026-02-10 09:13:35,826 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/WebKitBrowser.md
+2026-02-10 09:13:36,106 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 293, Duration: 0ms
+2026-02-10 09:13:36,382 - Knowledge - INFO - [kw3] Queue=63, InProgress=0, PendingWorkers=20/20, Completed=152/272 (55.9%)
+2026-02-10 09:13:36,566 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/SystemMode.md
+2026-02-10 09:13:36,675 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:36,677 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:36,677 - Knowledge - INFO - [kw1] Queue=63, InProgress=0, PendingWorkers=20/20, Completed=173/272 (63.6%)
+2026-02-10 09:13:36,678 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:36,678 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:36,678 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:36,678 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 572ms
+2026-02-10 09:13:36,762 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=63, active_workers=20/20
+2026-02-10 09:13:36,834 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/Migration.md
+2026-02-10 09:13:36,914 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/OpenCDMiPlugin.md
+2026-02-10 09:13:36,992 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DeviceInfo.md
+2026-02-10 09:13:37,073 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=63, active_workers=20/20
+2026-02-10 09:13:37,140 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/HdcpProfile.md
+2026-02-10 09:13:37,226 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/LEDControl.md
+2026-02-10 09:13:37,351 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PerformanceMetricsPlugin.md
+2026-02-10 09:13:37,479 - Knowledge - INFO - Progress: 52.9% | Files: 173/272 | Rate: 2.25 files/sec | Queue: 63
+2026-02-10 09:13:37,480 - Knowledge - INFO - [kw5] Queue=63, InProgress=0, PendingWorkers=20/20, Completed=173/272 (63.6%)
+2026-02-10 09:13:37,480 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:13:37,480 - Knowledge - INFO - [kw6] Queue=63, InProgress=0, PendingWorkers=20/20, Completed=173/272 (63.6%)
+2026-02-10 09:13:37,581 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:37,789 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/OCIContainer.md
+2026-02-10 09:13:37,876 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/RemoteControlPlugin.md
+2026-02-10 09:13:37,969 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:38,074 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/README.md
+2026-02-10 09:13:38,186 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MessageControl.md
+2026-02-10 09:13:38,195 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PowerManager.md
+2026-02-10 09:13:38,225 - Knowledge - INFO - [kw4] Queue=55, InProgress=0, PendingWorkers=20/20, Completed=173/272 (63.6%)
+2026-02-10 09:13:38,274 - Knowledge - INFO - [kw2] Queue=55, InProgress=0, PendingWorkers=20/20, Completed=173/272 (63.6%)
+2026-02-10 09:13:38,357 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=63, active_workers=20/20
+2026-02-10 09:13:38,464 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/SystemPlugin.md
+2026-02-10 09:13:38,547 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=63, active_workers=20/20
+2026-02-10 09:13:38,641 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/SystemMode/ISystemMode.h
+2026-02-10 09:13:38,751 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/HdmiCecSource.md
+2026-02-10 09:13:38,863 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/RDKShellPlugin.md
+2026-02-10 09:13:38,934 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/USBDevice/IUSBDevice.h
+2026-02-10 09:13:39,004 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/index.html
+2026-02-10 09:13:39,082 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DisplaySettingsPlugin.md
+2026-02-10 09:13:39,165 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/FirmwareUpdate.md
+2026-02-10 09:13:39,247 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=55, active_workers=20/20
+2026-02-10 09:13:39,317 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=55, active_workers=20/20
+2026-02-10 09:13:39,399 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:39,478 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/NativeJS.md
+2026-02-10 09:13:39,613 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:39,713 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Netflix/Netflix.json
+2026-02-10 09:13:39,782 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/RDKWindowManager.md
+2026-02-10 09:13:39,865 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/Analytics.md
+2026-02-10 09:13:39,956 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/TextTrack/ITextTrack.h
+2026-02-10 09:13:40,045 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/overview/_sidebar.md
+2026-02-10 09:13:40,114 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/VoiceControlPlugin.md
+2026-02-10 09:13:40,181 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/StorageManager.md
+2026-02-10 09:13:40,296 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:40,401 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:40,485 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LEDControl/ILEDControl.h
+2026-02-10 09:13:40,562 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/ScreenCapture.md
+2026-02-10 09:13:40,635 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DTV/DTV.json
+2026-02-10 09:13:40,735 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Netflix/Netflix.json (ext=.json, size=3021)
+2026-02-10 09:13:40,820 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/MotionDetectionPlugin.md
+2026-02-10 09:13:40,897 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/DeviceDiagnostics.md
+2026-02-10 09:13:40,973 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/MessageControl/IMessageControl.h
+2026-02-10 09:13:41,068 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/overview/aat.md
+2026-02-10 09:13:41,171 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/PersistentStore.md
+2026-02-10 09:13:41,254 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/UserSettings.md
+2026-02-10 09:13:41,365 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PersistentStore/IStore2.h
+2026-02-10 09:13:41,440 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/RDKShell/IFocus.h
+2026-02-10 09:13:41,513 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Packager/IPackager.h
+2026-02-10 09:13:41,637 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/AppManager.md
+2026-02-10 09:13:41,715 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DTV/DTV.json (ext=.json, size=50537)
+2026-02-10 09:13:41,791 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Netflix/INetflixSecurity.h
+2026-02-10 09:13:42,162 - Knowledge - INFO - Worker kw1 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Ids.h
+2026-02-10 09:13:42,559 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/common.json
+2026-02-10 09:13:42,630 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/RDKShell/IFocus.h (ext=.h, size=993)
+2026-02-10 09:13:42,758 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OCIContainer/IOCIContainer.h
+2026-02-10 09:13:42,780 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 292, Duration: 0ms
+2026-02-10 09:13:43,004 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-02-10 09:13:43,034 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PersistentStore/IStoreCache.h
+2026-02-10 09:13:43,125 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Netflix/INetflixSecurity.h (ext=.h, size=1678)
+2026-02-10 09:13:43,194 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/apis/SharedStorage.md
+2026-02-10 09:13:43,307 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/common.json (ext=.json, size=4372)
+2026-02-10 09:13:43,373 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/FrontPanel/IFrontPanel.h
+2026-02-10 09:13:43,477 - Knowledge - INFO - Worker kw5 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HdmiCecSource/IHdmiCecSource.h
+2026-02-10 09:13:43,582 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 802ms
+2026-02-10 09:13:43,812 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PersistentStore/IStoreCache.h (ext=.h, size=995)
+2026-02-10 09:13:43,888 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Netflix/INetflix.h
+2026-02-10 09:13:44,063 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/MiracastPlayer/IMiracastPlayer.h
+2026-02-10 09:13:44,143 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PlayerInfo/IPlayerInfo.h
+2026-02-10 09:13:44,277 - Knowledge - INFO - Progress: 63.6% | Files: 173/272 | Rate: 2.07 files/sec | Queue: 39
+2026-02-10 09:13:44,350 - Knowledge - INFO - [kw12] Queue=39, InProgress=0, PendingWorkers=20/20, Completed=173/272 (63.6%)
+2026-02-10 09:13:44,357 - Knowledge - INFO - [kw11] Queue=39, InProgress=0, PendingWorkers=20/20, Completed=173/272 (63.6%)
+2026-02-10 09:13:44,357 - Knowledge - INFO - [kw13] Queue=39, InProgress=0, PendingWorkers=20/20, Completed=173/272 (63.6%)
+2026-02-10 09:13:44,361 - Knowledge - INFO - [kw14] Queue=39, InProgress=0, PendingWorkers=20/20, Completed=173/272 (63.6%)
+2026-02-10 09:13:44,377 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PersistentStore/IStore.h
+2026-02-10 09:13:44,450 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/SystemMode/ISystemMode.h (small file (2943 bytes))
+2026-02-10 09:13:44,587 - Knowledge - INFO - Worker kw4 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/RDKShell/ICapture.h
+2026-02-10 09:13:44,639 - Knowledge - INFO - [kw9] Queue=39, InProgress=0, PendingWorkers=20/20, Completed=173/272 (63.6%)
+2026-02-10 09:13:44,670 - Knowledge - INFO - Worker kw2 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PlayerInfo/PlayerInfo.json
+2026-02-10 09:13:44,740 - Knowledge - INFO - [kw15] Queue=39, InProgress=0, PendingWorkers=20/20, Completed=173/272 (63.6%)
+2026-02-10 09:13:44,891 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=39, active_workers=20/20
+2026-02-10 09:13:45,021 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=39, active_workers=20/20
+2026-02-10 09:13:45,092 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=39, active_workers=20/20
+2026-02-10 09:13:45,165 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=39, active_workers=20/20
+2026-02-10 09:13:45,287 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PersistentStore/IStore.h (ext=.h, size=1719)
+2026-02-10 09:13:45,366 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Netflix/INetflix.h (small file (2008 bytes))
+2026-02-10 09:13:45,481 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/RDKShell/ICapture.h (ext=.h, size=1341)
+2026-02-10 09:13:45,559 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=39, active_workers=20/20
+2026-02-10 09:13:45,672 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PlayerInfo/PlayerInfo.json (ext=.json, size=2189)
+2026-02-10 09:13:45,800 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=39, active_workers=20/20
+2026-02-10 09:13:45,886 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:46,040 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:46,150 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:46,239 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:46,341 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PersistentStore/PersistentStore.json
+2026-02-10 09:13:46,473 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:13:46,710 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:47,152 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-02-10 09:13:47,202 - Knowledge - INFO - [LLM_CALL] Completed: IApplication.h:chunk1, Duration: 10527ms, PromptTokens: 2410, CompletionTokens: 467, Cost: $0.00043
+2026-02-10 09:13:47,246 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PlayerInfo/IDolby.h
+2026-02-10 09:13:47,367 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Portability.h
+2026-02-10 09:13:47,475 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AmazonPrime/IAmazonPrime.h
+2026-02-10 09:13:47,590 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/wpeframework-clientlibraries/IComposition.h
+2026-02-10 09:13:47,721 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PersistentStore/PersistentStore.json (ext=.json, size=10910)
+2026-02-10 09:13:47,928 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/USBMassStorage/IUSBMassStorage.h
+2026-02-10 09:13:48,034 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Telemetry/ITelemetry.h
+2026-02-10 09:13:48,153 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/IApplication.h
+2026-02-10 09:13:48,281 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PreinstallManager/IPreinstallManager.h
+2026-02-10 09:13:48,387 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Cobalt/IDictionary.h
+2026-02-10 09:13:48,472 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-02-10 09:13:48,522 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/XCast/IXCast.h
+2026-02-10 09:13:48,577 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:13:48,622 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/wpeframework-clientlibraries/ICryptography.h
+2026-02-10 09:13:48,725 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:13:48,859 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AppGateway/IAppGateway.h
+2026-02-10 09:13:48,993 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LifecycleManager/ILifecycleManager.h
+2026-02-10 09:13:49,258 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LISA/ILISA.h
+2026-02-10 09:13:49,286 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:13:49,399 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/FirmwareDownload/IFirmwareDownload.h
+2026-02-10 09:13:49,729 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DownloadManager/IDownloadManager.h
+2026-02-10 09:13:49,745 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/SystemMode/ISystemMode.h
+2026-02-10 09:13:49,987 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LinearPlaybackControl/LinearPlaybackControl.json
+2026-02-10 09:13:50,192 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HomeKitTV/IHomeKitTV.h
+2026-02-10 09:13:50,287 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LifecycleManager/ILifecycleManagerState.h
+2026-02-10 09:13:50,408 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:13:50,408 - Knowledge - INFO - Worker kw12 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LISA/LISA.json
+2026-02-10 09:13:50,543 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/IMemory.h
+2026-02-10 09:13:50,661 - Knowledge - INFO - Worker kw11 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/MiracastService/IMiracastService.h
+2026-02-10 09:13:50,772 - Knowledge - INFO - Worker kw13 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/wpeframework-clientlibraries/ICompositionBuffer.h
+2026-02-10 09:13:50,910 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Netflix/Netflix.json
+2026-02-10 09:13:51,058 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LinearPlaybackControl/LinearPlaybackControl.json (ext=.json, size=9542)
+2026-02-10 09:13:51,098 - Knowledge - INFO - [LLM_CALL] Completed: ISharedStorage.h:chunk1, Duration: 18191ms, PromptTokens: 4064, CompletionTokens: 771, Cost: $0.00071
+2026-02-10 09:13:51,123 - Knowledge - INFO - Worker kw9 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HomeKitTV/HomeKitTV.json
+2026-02-10 09:13:51,294 - Knowledge - INFO - Worker kw15 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AppNotifications/IAppNotifications.h
+2026-02-10 09:13:51,333 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DTV/DTV.json
+2026-02-10 09:13:51,500 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LISA/LISA.json (ext=.json, size=21516)
+2026-02-10 09:13:51,600 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/Browser.json
+2026-02-10 09:13:51,850 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AmazonPrime/IAmazonPrime.h (small file (2906 bytes))
+2026-02-10 09:13:51,945 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Netflix/INetflixSecurity.h
+2026-02-10 09:13:52,020 - Knowledge - INFO - Worker kw14 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Warehouse/IWarehouse.h
+2026-02-10 09:13:52,095 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/SharedStorage/ISharedStorage.h
+2026-02-10 09:13:52,096 - Knowledge - INFO - [LLM_CALL] Completed: IHdmiCecSink.h:chunk1, Duration: 16269ms, PromptTokens: 9354, CompletionTokens: 1121, Cost: $0.00138
+2026-02-10 09:13:52,173 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HomeKitTV/HomeKitTV.json (ext=.json, size=9145)
+2026-02-10 09:13:52,553 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PersistentStore/IStoreCache.h
+2026-02-10 09:13:52,744 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/WebKitBrowser.json
+2026-02-10 09:13:52,972 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Netflix/INetflix.h
+2026-02-10 09:13:53,361 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HdmiCecSink/IHdmiCecSink.h
+2026-02-10 09:13:53,368 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Packager/IPackager.h (small file (2640 bytes))
+2026-02-10 09:13:53,621 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PersistentStore/IStore.h
+2026-02-10 09:13:53,751 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/IApplication.h
+2026-02-10 09:13:53,887 - Knowledge - INFO - [LLM_CALL] Completed: IDisplayInfo.h:chunk1, Duration: 17211ms, PromptTokens: 5064, CompletionTokens: 940, Cost: $0.00088
+2026-02-10 09:13:54,195 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PersistentStore/PersistentStore.json
+2026-02-10 09:13:54,411 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DisplayInfo/IDisplayInfo.h
+2026-02-10 09:13:54,988 - Knowledge - INFO - [LLM_CALL] Completed: IStorageManager.h:chunk1, Duration: 14500ms, PromptTokens: 2530, CompletionTokens: 460, Cost: $0.00044
+2026-02-10 09:13:55,237 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/StorageManager/IStorageManager.h
+2026-02-10 09:13:55,239 - Knowledge - INFO - [LLM_CALL] Completed: IMigration.h:chunk1, Duration: 13854ms, PromptTokens: 2228, CompletionTokens: 300, Cost: $0.00034
+2026-02-10 09:13:55,554 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Migration/IMigration.h
+2026-02-10 09:13:55,555 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:13:55,556 - Knowledge - INFO - [LLM_CALL] Completed: IFirmwareUpdate.h:chunk1, Duration: 23138ms, PromptTokens: 2926, CompletionTokens: 404, Cost: $0.00045
+2026-02-10 09:13:55,791 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DisplayInfo/IConfiguration.h
+2026-02-10 09:13:55,877 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/FirmwareUpdate/IFirmwareUpdate.h
+2026-02-10 09:13:56,621 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HdmiCecSink/IHdmiCecSink.h
+2026-02-10 09:13:56,642 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 290, Duration: 0ms
+2026-02-10 09:13:57,101 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/StateControl/StateControl.json
+2026-02-10 09:13:57,272 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 630ms
+2026-02-10 09:13:57,362 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DeviceIdentification/DeviceIdentification.json
+2026-02-10 09:13:57,823 - Knowledge - INFO - Progress: 70.2% | Files: 193/272 | Rate: 1.99 files/sec | Queue: 15
+2026-02-10 09:13:57,834 - Knowledge - INFO - [kw20] Queue=15, InProgress=0, PendingWorkers=20/20, Completed=193/272 (71.0%)
+2026-02-10 09:13:57,901 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:13:57,907 - Knowledge - INFO - [kw6] Queue=15, InProgress=0, PendingWorkers=20/20, Completed=193/272 (71.0%)
+2026-02-10 09:13:58,343 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=15, active_workers=20/20
+2026-02-10 09:13:58,451 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/SharedStorage/ISharedStorage.h
+2026-02-10 09:13:58,537 - Knowledge - INFO - [kw3] Queue=15, InProgress=0, PendingWorkers=20/20, Completed=193/272 (71.0%)
+2026-02-10 09:13:58,650 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=15, active_workers=20/20
+2026-02-10 09:13:58,913 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=15, active_workers=20/20
+2026-02-10 09:13:58,915 - Knowledge - INFO - [LLM_CALL] Completed: IBrowser.h:chunk1, Duration: 23196ms, PromptTokens: 5614, CompletionTokens: 894, Cost: $0.00092
+2026-02-10 09:13:59,005 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/TelemetryMetrics/ITelemetryMetrics.h
+2026-02-10 09:13:59,279 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/IBrowser.h
+2026-02-10 09:13:59,298 - Knowledge - INFO - Async storing batch of 4 embeddings
+2026-02-10 09:13:59,299 - Knowledge - INFO - Async storing batch of 4 embeddings
+2026-02-10 09:13:59,300 - Knowledge - INFO - Async storing batch of 4 embeddings
+2026-02-10 09:13:59,368 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DisplayInfo/DisplayInfo.json
+2026-02-10 09:13:59,635 - Knowledge - INFO - Worker kw20 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Module.cpp
+2026-02-10 09:13:59,829 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PackageManager/IAppPackageManager.h
+2026-02-10 09:13:59,959 - Knowledge - INFO - [kw19] Queue=3, InProgress=0, PendingWorkers=20/20, Completed=196/272 (72.1%)
+2026-02-10 09:14:00,059 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OpenCDMi/IContentDecryption.h
+2026-02-10 09:14:00,238 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DisplayInfo/IDisplayInfo.h
+2026-02-10 09:14:00,423 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:14:00,475 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Module.cpp (ext=.cpp, size=779)
+2026-02-10 09:14:00,671 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AVInput/IAVInput.h
+2026-02-10 09:14:00,736 - Knowledge - INFO - Batch sizing: calculated=3, max_allowed=10, queue=3, active_workers=20/20
+2026-02-10 09:14:00,899 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OpenCDMi/OCDM.json
+2026-02-10 09:14:01,174 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/IBrowser.h
+2026-02-10 09:14:01,247 - Knowledge - INFO - Worker kw20 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/FrameRate/IFrameRate.h
+2026-02-10 09:14:01,337 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OpenCDMi/IOCDM.h
+2026-02-10 09:14:01,513 - Knowledge - INFO - [LLM_CALL] Completed: IUserSettings.h:chunk1, Duration: 26120ms, PromptTokens: 10314, CompletionTokens: 1468, Cost: $0.00162
+2026-02-10 09:14:01,577 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OpenCDMi/OCDM.json (ext=.json, size=3221)
+2026-02-10 09:14:01,842 - Knowledge - INFO - Worker kw20 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PackageManager/IPackageManager.h
+2026-02-10 09:14:01,927 - Knowledge - INFO - Worker kw6 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OpenCDMi/IDRM.h
+2026-02-10 09:14:01,951 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/WebKitBrowser/CookieJar.json
+2026-02-10 09:14:02,044 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/UserSettings/IUserSettings.h
+2026-02-10 09:14:02,051 - Knowledge - INFO - Async storing batch of 4 embeddings
+2026-02-10 09:14:02,142 - Knowledge - INFO - [LLM_CALL] Completed: IScreenCapture.h:chunk1, Duration: 18561ms, PromptTokens: 2046, CompletionTokens: 352, Cost: $0.00035
+2026-02-10 09:14:02,142 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/RuntimeManager/IRuntimeManager.h
+2026-02-10 09:14:02,221 - Knowledge - INFO - Worker kw20 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PackageManager/README.md
+2026-02-10 09:14:02,645 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Migration/IMigration.h
+2026-02-10 09:14:02,964 - Knowledge - INFO - Worker kw19 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/governance.md
+2026-02-10 09:14:03,040 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/ScreenCapture/IScreenCapture.h
+2026-02-10 09:14:03,042 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 272, Duration: 0ms
+2026-02-10 09:14:03,115 - Knowledge - INFO - Worker kw3 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/README.md
+2026-02-10 09:14:03,248 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PackageManager/README.md (ext=.md, size=306)
+2026-02-10 09:14:03,340 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/SystemMode/IDeviceOptimizeStateActivator.h
+2026-02-10 09:14:03,429 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/governance.md (ext=.md, size=15044)
+2026-02-10 09:14:03,824 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/README.md (ext=.md, size=9174)
+2026-02-10 09:14:03,826 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 784ms
+2026-02-10 09:14:04,231 - Knowledge - INFO - Worker kw19 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/CONTRIBUTING.md
+2026-02-10 09:14:04,545 - Knowledge - INFO - Progress: 73.5% | Files: 201/272 | Rate: 1.93 files/sec | Queue: 0
+2026-02-10 09:14:04,752 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/CONTRIBUTING.md (ext=.md, size=267)
+2026-02-10 09:14:04,816 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:14:04,968 - Knowledge - INFO - Worker kw19 processing /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/CHANGELOG.md
+2026-02-10 09:14:04,969 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Cobalt/IDictionary.h (small file (2514 bytes))
+2026-02-10 09:14:05,038 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/overview/arch.md
+2026-02-10 09:14:05,068 - Knowledge - INFO - [LLM_CALL] Completed: IDeviceDiagnostics.h:chunk1, Duration: 32547ms, PromptTokens: 2360, CompletionTokens: 597, Cost: $0.00047
+2026-02-10 09:14:05,245 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/CHANGELOG.md (ext=.md, size=90265)
+2026-02-10 09:14:05,673 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DeviceDiagnostics/IDeviceDiagnostics.h
+2026-02-10 09:14:05,769 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/docs/overview/intro.md
+2026-02-10 09:14:05,850 - Knowledge - INFO - Async storage completed for 4 embeddings
+2026-02-10 09:14:06,464 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/FirmwareUpdate/IFirmwareUpdate.h
+2026-02-10 09:14:06,555 - Knowledge - INFO - Processing batch of 3 files
+2026-02-10 09:14:06,860 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/UserSettings/IUserSettings.h
+2026-02-10 09:14:06,892 - Knowledge - INFO - [LLM_CALL] Completed: IAppManager.h:chunk1, Duration: 22157ms, PromptTokens: 7172, CompletionTokens: 993, Cost: $0.00111
+2026-02-10 09:14:07,007 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/governance.md
+2026-02-10 09:14:07,111 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/MessageControl/IMessageControl.h (small file (2289 bytes))
+2026-02-10 09:14:07,128 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/StorageManager/IStorageManager.h
+2026-02-10 09:14:07,284 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AppManager/IAppManager.h
+2026-02-10 09:14:07,362 - Knowledge - INFO - [LLM_CALL] Completed: ISystemAudioPlayer.h:chunk1, Duration: 30685ms, PromptTokens: 3610, CompletionTokens: 645, Cost: $0.00062
+2026-02-10 09:14:07,366 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/CONTRIBUTING.md
+2026-02-10 09:14:07,928 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/SystemAudioPlayer/ISystemAudioPlayer.h
+2026-02-10 09:14:07,946 - Knowledge - INFO - [LLM_CALL] Completed: IHdcpProfile.h:chunk1, Duration: 33860ms, PromptTokens: 2512, CompletionTokens: 556, Cost: $0.00047
+2026-02-10 09:14:08,111 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PreinstallManager/IPreinstallManager.h (small file (2088 bytes))
+2026-02-10 09:14:08,138 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/CHANGELOG.md
+2026-02-10 09:14:08,248 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HdcpProfile/IHdcpProfile.h
+2026-02-10 09:14:10,660 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:14:10,825 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Monitor/Monitor.json
+2026-02-10 09:14:11,132 - Knowledge - INFO - [LLM_CALL] Completed: IGoogleCast.h:chunk1, Duration: 26713ms, PromptTokens: 3530, CompletionTokens: 411, Cost: $0.00052
+2026-02-10 09:14:11,275 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DeviceDiagnostics/IDeviceDiagnostics.h
+2026-02-10 09:14:11,393 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/GoogleCast/IGoogleCast.h
+2026-02-10 09:14:11,899 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Analytics/IAnalytics.h
+2026-02-10 09:14:11,908 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 273, Duration: 0ms
+2026-02-10 09:14:12,203 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/SystemAudioPlayer/ISystemAudioPlayer.h
+2026-02-10 09:14:12,282 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 374ms
+2026-02-10 09:14:12,480 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/ScreenCapture/IScreenCapture.h
+2026-02-10 09:14:12,500 - Knowledge - INFO - Progress: 77.2% | Files: 210/272 | Rate: 1.87 files/sec | Queue: 0
+2026-02-10 09:14:12,507 - Knowledge - INFO - [LLM_CALL] Completed: IRDKWindowManager.h:chunk1, Duration: 38157ms, PromptTokens: 5970, CompletionTokens: 971, Cost: $0.00099
+2026-02-10 09:14:12,985 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/RDKWindowManager/IRDKWindowManager.h
+2026-02-10 09:14:13,569 - Knowledge - INFO - [LLM_CALL] Completed: ITextToSpeech.h:chunk1, Duration: 41381ms, PromptTokens: 5642, CompletionTokens: 1032, Cost: $0.00098
+2026-02-10 09:14:13,879 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/TextToSpeech/ITextToSpeech.h
+2026-02-10 09:14:13,962 - Knowledge - INFO - [LLM_CALL] Completed: IDeviceInfo.h:chunk1, Duration: 34316ms, PromptTokens: 10570, CompletionTokens: 814, Cost: $0.00138
+2026-02-10 09:14:14,200 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DeviceInfo/IDeviceInfo.h
+2026-02-10 09:14:14,333 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:14:15,266 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:14:15,881 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:14:16,024 - Knowledge - INFO - [LLM_CALL] Completed: IPowerManager.h:chunk1, Duration: 37591ms, PromptTokens: 8600, CompletionTokens: 1321, Cost: $0.00139
+2026-02-10 09:14:16,086 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/NativeJS/INativeJS.h
+2026-02-10 09:14:16,178 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PowerManager/IPowerManager.h
+2026-02-10 09:14:16,282 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/RDKWindowManager/IRDKWindowManager.h
+2026-02-10 09:14:16,418 - Knowledge - INFO - Processing batch of 5 files
+2026-02-10 09:14:16,478 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Module.h
+2026-02-10 09:14:16,630 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/TextToSpeech/ITextToSpeech.h
+2026-02-10 09:14:16,747 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DeviceInfo/IDeviceInfo.h
+2026-02-10 09:14:16,873 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HdcpProfile/IHdcpProfile.h
+2026-02-10 09:14:16,974 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AppManager/IAppManager.h
+2026-02-10 09:14:17,085 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PowerManager/IPowerManager.h
+2026-02-10 09:14:17,328 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/GoogleCast/IGoogleCast.h
+2026-02-10 09:14:17,504 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/entservices_errorcodes.h
+2026-02-10 09:14:17,709 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 273, Duration: 0ms
+2026-02-10 09:14:17,859 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 149ms
+2026-02-10 09:14:18,029 - Knowledge - INFO - Progress: 80.9% | Files: 220/272 | Rate: 1.85 files/sec | Queue: 0
+2026-02-10 09:14:19,743 - Knowledge - INFO - [LLM_CALL] Completed: IPlayerInfo.h:chunk1, Duration: 20458ms, PromptTokens: 2656, CompletionTokens: 369, Cost: $0.00041
+2026-02-10 09:14:19,980 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PlayerInfo/IPlayerInfo.h
+2026-02-10 09:14:20,397 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:14:21,502 - Knowledge - INFO - [LLM_CALL] Completed: IStore2.h:chunk1, Duration: 34806ms, PromptTokens: 2560, CompletionTokens: 588, Cost: $0.00049
+2026-02-10 09:14:21,676 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PersistentStore/IStore2.h
+2026-02-10 09:14:21,820 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/wpeframework-clientlibraries/ICompositionBuffer.h (small file (2777 bytes))
+2026-02-10 09:14:22,305 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:14:22,575 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:14:22,600 - Knowledge - INFO - [LLM_CALL] Completed: IFrontPanel.h:chunk1, Duration: 35499ms, PromptTokens: 2846, CompletionTokens: 656, Cost: $0.00055
+2026-02-10 09:14:22,879 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/FrontPanel/IFrontPanel.h
+2026-02-10 09:14:22,880 - Knowledge - INFO - [LLM_CALL] Completed: IMiracastPlayer.h:chunk1, Duration: 24991ms, PromptTokens: 4502, CompletionTokens: 526, Cost: $0.00066
+2026-02-10 09:14:23,210 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/MiracastPlayer/IMiracastPlayer.h
+2026-02-10 09:14:23,262 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:14:23,434 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:14:23,495 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/RDKShell/IFocus.h
+2026-02-10 09:14:23,633 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PersistentStore/IStore2.h
+2026-02-10 09:14:23,740 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/FrontPanel/IFrontPanel.h
+2026-02-10 09:14:23,821 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/common.json
+2026-02-10 09:14:23,846 - Knowledge - INFO - Fast-tracked /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HomeKitTV/IHomeKitTV.h (small file (2586 bytes))
+2026-02-10 09:14:24,155 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PlayerInfo/IPlayerInfo.h
+2026-02-10 09:14:24,170 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/MiracastPlayer/IMiracastPlayer.h
+2026-02-10 09:14:24,260 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:14:24,340 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:14:24,514 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PlayerInfo/PlayerInfo.json
+2026-02-10 09:14:24,594 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/RDKShell/ICapture.h
+2026-02-10 09:14:25,439 - Knowledge - INFO - [LLM_CALL] Completed: IDolby.h:chunk1, Duration: 32008ms, PromptTokens: 2196, CompletionTokens: 441, Cost: $0.00040
+2026-02-10 09:14:25,711 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PlayerInfo/IDolby.h
+2026-02-10 09:14:25,773 - Knowledge - INFO - [LLM_CALL] Completed: Ids.h:chunk1, Duration: 17844ms, PromptTokens: 9606, CompletionTokens: 155, Cost: $0.00102
+2026-02-10 09:14:26,132 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Ids.h
+2026-02-10 09:14:28,229 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 272, Duration: 0ms
+2026-02-10 09:14:28,439 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 210ms
+2026-02-10 09:14:28,671 - Knowledge - INFO - Async storage completed for 4 embeddings
+2026-02-10 09:14:28,678 - Knowledge - INFO - Progress: 83.8% | Files: 228/272 | Rate: 1.77 files/sec | Queue: 0
+2026-02-10 09:14:29,096 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:14:29,255 - Knowledge - INFO - Async storage completed for 4 embeddings
+2026-02-10 09:14:32,343 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:14:34,400 - Knowledge - INFO - [LLM_CALL] Completed: ILISA.h:chunk1, Duration: 25947ms, PromptTokens: 5202, CompletionTokens: 1246, Cost: $0.00102
+2026-02-10 09:14:34,661 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LISA/ILISA.h
+2026-02-10 09:14:35,161 - Knowledge - INFO - [LLM_CALL] Completed: IDownloadManager.h:chunk1, Duration: 27870ms, PromptTokens: 2988, CompletionTokens: 686, Cost: $0.00057
+2026-02-10 09:14:35,292 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-02-10 09:14:35,461 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DownloadManager/IDownloadManager.h
+2026-02-10 09:14:36,359 - Knowledge - INFO - Async storage completed for 4 embeddings
+2026-02-10 09:14:37,387 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:14:37,729 - Knowledge - INFO - [LLM_CALL] Completed: IXCast.h:chunk1, Duration: 44287ms, PromptTokens: 6808, CompletionTokens: 786, Cost: $0.00100
+2026-02-10 09:14:37,808 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PlayerInfo/IDolby.h
+2026-02-10 09:14:37,976 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/XCast/IXCast.h
+2026-02-10 09:14:38,329 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PreinstallManager/IPreinstallManager.h
+2026-02-10 09:14:38,402 - Knowledge - INFO - [LLM_CALL] Completed: Portability.h:chunk1, Duration: 46306ms, PromptTokens: 3926, CompletionTokens: 59, Cost: $0.00042
+2026-02-10 09:14:38,737 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Portability.h
+2026-02-10 09:14:38,863 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LISA/ILISA.h
+2026-02-10 09:14:38,790 - Knowledge - INFO - [LLM_CALL] Completed: ILEDControl.h:chunk1, Duration: 54512ms, PromptTokens: 2334, CompletionTokens: 327, Cost: $0.00036
+2026-02-10 09:14:39,295 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LEDControl/ILEDControl.h
+2026-02-10 09:14:39,948 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LISA/LISA.json
+2026-02-10 09:14:40,227 - Knowledge - INFO - [LLM_CALL] Completed: IUSBDevice.h:chunk1, Duration: 56645ms, PromptTokens: 3790, CompletionTokens: 637, Cost: $0.00063
+2026-02-10 09:14:40,507 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/USBDevice/IUSBDevice.h
+2026-02-10 09:14:40,509 - Knowledge - INFO - [LLM_CALL] Completed: IUSBMassStorage.h:chunk1, Duration: 46637ms, PromptTokens: 3318, CompletionTokens: 535, Cost: $0.00055
+2026-02-10 09:14:40,869 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/USBMassStorage/IUSBMassStorage.h
+2026-02-10 09:14:43,045 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:14:43,354 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AmazonPrime/IAmazonPrime.h
+2026-02-10 09:14:43,884 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/XCast/IXCast.h
+2026-02-10 09:14:45,127 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/DownloadManager/IDownloadManager.h
+2026-02-10 09:14:45,545 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 273, Duration: 0ms
+2026-02-10 09:14:45,732 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/wpeframework-clientlibraries/ICompositionBuffer.h
+2026-02-10 09:14:45,844 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 299ms
+2026-02-10 09:14:46,245 - Knowledge - INFO - Progress: 86.8% | Files: 236/272 | Rate: 1.62 files/sec | Queue: 0
+2026-02-10 09:14:48,222 - Knowledge - INFO - [LLM_CALL] Completed: IAppGateway.h:chunk1, Duration: 37487ms, PromptTokens: 5050, CompletionTokens: 941, Cost: $0.00088
+2026-02-10 09:14:48,485 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AppGateway/IAppGateway.h
+2026-02-10 09:14:50,992 - Knowledge - INFO - [LLM_CALL] Completed: IFrameRate.h:chunk1, Duration: 46429ms, PromptTokens: 2980, CompletionTokens: 652, Cost: $0.00056
+2026-02-10 09:14:51,310 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/FrameRate/IFrameRate.h
+2026-02-10 09:14:52,208 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:14:52,560 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/USBMassStorage/IUSBMassStorage.h
+2026-02-10 09:14:53,222 - Knowledge - INFO - [LLM_CALL] Completed: IMiracastService.h:chunk1, Duration: 33777ms, PromptTokens: 4312, CompletionTokens: 666, Cost: $0.00070
+2026-02-10 09:14:53,573 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/MiracastService/IMiracastService.h
+2026-02-10 09:14:53,585 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AppGateway/IAppGateway.h
+2026-02-10 09:14:53,599 - Knowledge - INFO - [LLM_CALL] Completed: IRuntimeManager.h:chunk1, Duration: 33607ms, PromptTokens: 4198, CompletionTokens: 697, Cost: $0.00070
+2026-02-10 09:14:54,251 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/RuntimeManager/IRuntimeManager.h
+2026-02-10 09:14:54,910 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HomeKitTV/IHomeKitTV.h
+2026-02-10 09:14:55,737 - Knowledge - INFO - [LLM_CALL] Completed: IOCIContainer.h:chunk1, Duration: 61323ms, PromptTokens: 4904, CompletionTokens: 754, Cost: $0.00079
+2026-02-10 09:14:55,990 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OCIContainer/IOCIContainer.h
+2026-02-10 09:14:56,320 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HomeKitTV/HomeKitTV.json
+2026-02-10 09:14:56,348 - Knowledge - INFO - [LLM_CALL] Completed: IPackageManager.h:chunk1, Duration: 36802ms, PromptTokens: 4206, CompletionTokens: 893, Cost: $0.00078
+2026-02-10 09:14:56,737 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PackageManager/IPackageManager.h
+2026-02-10 09:14:57,785 - Knowledge - INFO - [LLM_CALL] Completed: IFirmwareDownload.h:chunk1, Duration: 52111ms, PromptTokens: 2546, CompletionTokens: 815, Cost: $0.00058
+2026-02-10 09:14:58,088 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/FirmwareDownload/IFirmwareDownload.h
+2026-02-10 09:14:58,730 - Knowledge - INFO - [LLM_CALL] Completed: ITextTrack.h:chunk1, Duration: 65344ms, PromptTokens: 11818, CompletionTokens: 1628, Cost: $0.00183
+2026-02-10 09:14:59,035 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/TextTrack/ITextTrack.h
+2026-02-10 09:14:59,358 - Knowledge - INFO - [LLM_CALL] Completed: IHdmiCecSource.h:chunk1, Duration: 50413ms, PromptTokens: 4684, CompletionTokens: 876, Cost: $0.00082
+2026-02-10 09:14:59,598 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HdmiCecSource/IHdmiCecSource.h
+2026-02-10 09:14:59,603 - Knowledge - INFO - [LLM_CALL] Completed: IContentDecryption.h:chunk1, Duration: 55029ms, PromptTokens: 4896, CompletionTokens: 1009, Cost: $0.00089
+2026-02-10 09:14:59,972 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OpenCDMi/IContentDecryption.h
+2026-02-10 09:15:00,748 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 274, Duration: 0ms
+2026-02-10 09:15:01,057 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:15:01,068 - Knowledge - INFO - [LLM_CALL] Completed: ILifecycleManagerState.h:chunk1, Duration: 39608ms, PromptTokens: 2332, CompletionTokens: 412, Cost: $0.00040
+2026-02-10 09:15:01,314 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Module.cpp
+2026-02-10 09:15:01,404 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LifecycleManager/ILifecycleManagerState.h
+2026-02-10 09:15:01,414 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 666ms
+2026-02-10 09:15:01,723 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/FrameRate/IFrameRate.h
+2026-02-10 09:15:01,884 - Knowledge - INFO - Progress: 91.5% | Files: 255/272 | Rate: 1.58 files/sec | Queue: 0
+2026-02-10 09:15:02,130 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PackageManager/IPackageManager.h
+2026-02-10 09:15:02,433 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:15:02,481 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:15:02,555 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:15:02,686 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PackageManager/README.md
+2026-02-10 09:15:02,703 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:15:02,714 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OpenCDMi/IContentDecryption.h
+2026-02-10 09:15:02,802 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/USBDevice/IUSBDevice.h
+2026-02-10 09:15:02,982 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LEDControl/ILEDControl.h
+2026-02-10 09:15:03,307 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Portability.h
+2026-02-10 09:15:03,602 - Knowledge - INFO - [LLM_CALL] Completed: IAppNotifications.h:chunk1, Duration: 32444ms, PromptTokens: 2786, CompletionTokens: 470, Cost: $0.00047
+2026-02-10 09:15:03,637 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OpenCDMi/OCDM.json
+2026-02-10 09:15:04,039 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AppNotifications/IAppNotifications.h
+2026-02-10 09:15:04,066 - Knowledge - INFO - [LLM_CALL] Completed: ICryptography.h:chunk1, Duration: 53427ms, PromptTokens: 4210, CompletionTokens: 954, Cost: $0.00080
+2026-02-10 09:15:04,351 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/TextTrack/ITextTrack.h
+2026-02-10 09:15:04,456 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Packager/IPackager.h
+2026-02-10 09:15:04,464 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/wpeframework-clientlibraries/ICryptography.h
+2026-02-10 09:15:04,510 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/RuntimeManager/IRuntimeManager.h
+2026-02-10 09:15:04,558 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Cobalt/IDictionary.h
+2026-02-10 09:15:05,019 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/MessageControl/IMessageControl.h
+2026-02-10 09:15:05,099 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OCIContainer/IOCIContainer.h
+2026-02-10 09:15:05,505 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/FirmwareDownload/IFirmwareDownload.h
+2026-02-10 09:15:05,531 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/README.md
+2026-02-10 09:15:05,727 - Knowledge - INFO - [LLM_CALL] Completed: IWarehouse.h:chunk1, Duration: 40898ms, PromptTokens: 2594, CompletionTokens: 534, Cost: $0.00047
+2026-02-10 09:15:05,858 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Ids.h
+2026-02-10 09:15:05,866 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/HdmiCecSource/IHdmiCecSource.h
+2026-02-10 09:15:05,939 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Warehouse/IWarehouse.h
+2026-02-10 09:15:07,577 - Knowledge - INFO - [LLM_CALL] Completed: IComposition.h:chunk1, Duration: 74130ms, PromptTokens: 3928, CompletionTokens: 667, Cost: $0.00066
+2026-02-10 09:15:07,861 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/wpeframework-clientlibraries/IComposition.h
+2026-02-10 09:15:07,994 - Knowledge - INFO - [LLM_CALL] Completed: ILifecycleManager.h:chunk1, Duration: 60059ms, PromptTokens: 3026, CompletionTokens: 676, Cost: $0.00057
+2026-02-10 09:15:08,222 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LifecycleManager/ILifecycleManager.h
+2026-02-10 09:15:08,223 - Knowledge - INFO - [LLM_CALL] Completed: IAppPackageManager.h:chunk1, Duration: 65183ms, PromptTokens: 5620, CompletionTokens: 788, Cost: $0.00088
+2026-02-10 09:15:08,302 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/MiracastService/IMiracastService.h
+2026-02-10 09:15:08,481 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PackageManager/IAppPackageManager.h
+2026-02-10 09:15:08,491 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 273, Duration: 0ms
+2026-02-10 09:15:09,196 - Knowledge - INFO - [LLM_CALL] Completed: ITelemetry.h:chunk1, Duration: 75809ms, PromptTokens: 2514, CompletionTokens: 483, Cost: $0.00044
+2026-02-10 09:15:09,917 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Telemetry/ITelemetry.h
+2026-02-10 09:15:09,919 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 1428ms
+2026-02-10 09:15:10,446 - Knowledge - INFO - Progress: 96.0% | Files: 261/272 | Rate: 1.55 files/sec | Queue: 0
+2026-02-10 09:15:13,433 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:15:13,512 - Knowledge - INFO - [LLM_CALL] Completed: IOCDM.h:chunk1, Duration: 45074ms, PromptTokens: 7788, CompletionTokens: 1541, Cost: $0.00140
+2026-02-10 09:15:13,618 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/wpeframework-clientlibraries/IComposition.h
+2026-02-10 09:15:13,708 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OpenCDMi/IOCDM.h
+2026-02-10 09:15:13,731 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:15:13,813 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/wpeframework-clientlibraries/ICryptography.h
+2026-02-10 09:15:14,017 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Telemetry/ITelemetry.h
+2026-02-10 09:15:14,224 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LinearPlaybackControl/LinearPlaybackControl.json
+2026-02-10 09:15:14,419 - Knowledge - INFO - [LLM_CALL] Completed: IAVInput.h:chunk1, Duration: 56390ms, PromptTokens: 9034, CompletionTokens: 1571, Cost: $0.00153
+2026-02-10 09:15:14,424 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LifecycleManager/ILifecycleManager.h
+2026-02-10 09:15:14,424 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/Warehouse/IWarehouse.h
+2026-02-10 09:15:14,603 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AVInput/IAVInput.h
+2026-02-10 09:15:14,718 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/LifecycleManager/ILifecycleManagerState.h
+2026-02-10 09:15:15,216 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AppNotifications/IAppNotifications.h
+2026-02-10 09:15:15,402 - Knowledge - INFO - [LLM_CALL] Completed: IDRM.h:chunk1, Duration: 41137ms, PromptTokens: 11582, CompletionTokens: 2113, Cost: $0.00200
+2026-02-10 09:15:15,572 - Knowledge - INFO - done ingest for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OpenCDMi/IDRM.h
+2026-02-10 09:15:15,678 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 273, Duration: 0ms
+2026-02-10 09:15:15,854 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 176ms
+2026-02-10 09:15:16,043 - Knowledge - INFO - Progress: 98.5% | Files: 269/272 | Rate: 1.52 files/sec | Queue: 0
+2026-02-10 09:15:16,075 - Knowledge - INFO - Processing batch of 4 files
+2026-02-10 09:15:16,303 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/PackageManager/IAppPackageManager.h
+2026-02-10 09:15:16,473 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/AVInput/IAVInput.h
+2026-02-10 09:15:16,650 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OpenCDMi/IOCDM.h
+2026-02-10 09:15:16,844 - Knowledge - INFO - process ingested knowledge for /app/data/tataelxsimcvaripplecode5379/34/b5100do/entservices-apis-34/apis/OpenCDMi/IDRM.h
+2026-02-10 09:15:17,372 - Knowledge - INFO - Knowledge creation complete
+2026-02-10 09:15:17,528 - Knowledge - INFO - ==================================================
+2026-02-10 09:15:17,737 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2026-02-10 09:15:17,913 - Knowledge - INFO - ==================================================
+2026-02-10 09:15:18,075 - Knowledge - INFO - Total processing time: 178.40 seconds (2.97 minutes)
+2026-02-10 09:15:18,246 - Knowledge - INFO - Files processed: 0
+2026-02-10 09:15:18,412 - Knowledge - INFO - Processing rate: 0.00 files/second
+2026-02-10 09:15:18,559 - Knowledge - INFO - 
+[TIME_BREAKDOWN]
+2026-02-10 09:15:18,745 - Knowledge - INFO - File Reading: 0.00s (0.0%)
+2026-02-10 09:15:18,922 - Knowledge - INFO - LLM Processing: 2067.60s (1159.0%)
+2026-02-10 09:15:19,132 - Knowledge - INFO - MongoDB Operations: 0.00s (0.0%)
+2026-02-10 09:15:19,279 - Knowledge - INFO - Redis Operations: 0.00s (0.0%)
+2026-02-10 09:15:19,434 - Knowledge - INFO - WebSocket Communication: 13.01s (7.3%)
+2026-02-10 09:15:19,628 - Knowledge - INFO - 
+[LLM_STATS]
+2026-02-10 09:15:19,788 - Knowledge - INFO - Total LLM calls: 59
+2026-02-10 09:15:19,968 - Knowledge - INFO - Average LLM response time: 35044ms
+2026-02-10 09:15:20,187 - Knowledge - INFO - Average prompt tokens: 5126.8
+2026-02-10 09:15:20,354 - Knowledge - INFO - Average completion tokens: 755.2
+2026-02-10 09:15:20,558 - Knowledge - INFO - Total prompt tokens: 302484
+2026-02-10 09:15:20,753 - Knowledge - INFO - Total completion tokens: 44557
+2026-02-10 09:15:20,945 - Knowledge - INFO - Total LLM cost: $0.0481
+2026-02-10 09:15:21,113 - Knowledge - INFO - 
+[DATABASE_STATS]
+2026-02-10 09:15:21,287 - Knowledge - INFO - MongoDB operations: 0
+2026-02-10 09:15:21,470 - Knowledge - INFO - Redis operations: 0
+2026-02-10 09:15:21,646 - Knowledge - INFO - 
+[COMMUNICATION_STATS]
+2026-02-10 09:15:21,822 - Knowledge - INFO - WebSocket messages sent: 29
+2026-02-10 09:15:21,996 - Knowledge - INFO - Average message size: 141.0 bytes
+2026-02-10 09:15:22,145 - Knowledge - INFO - 
+[WORKER_STATS]
+2026-02-10 09:15:22,305 - Knowledge - INFO - 
+[FILE_TYPE_STATS]
+2026-02-10 09:15:22,460 - Knowledge - INFO - 
+[SLOWEST_FILES]
+2026-02-10 09:15:22,631 - Knowledge - INFO - ==================================================
+2026-02-10 09:15:22,784 - Knowledge - INFO - ==================================================
+2026-02-10 09:15:22,934 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2026-02-10 09:15:23,079 - Knowledge - INFO - ==================================================
+2026-02-10 09:15:23,267 - Knowledge - INFO - Total processing time: 183.71 seconds (3.06 minutes)
+2026-02-10 09:15:23,465 - Knowledge - INFO - Files processed: 272 of 272
+2026-02-10 09:15:23,637 - Knowledge - INFO - Processing rate: 1.48 files/second
+2026-02-10 09:15:23,827 - Knowledge - INFO - WebSocket messages sent: 14
+2026-02-10 09:15:24,026 - Knowledge - INFO - MongoDB operations: 272
+2026-02-10 09:15:24,188 - Knowledge - INFO - Average MongoDB ops per file: 1.00
+2026-02-10 09:15:24,333 - Knowledge - INFO - LLM costs: $0.0481
+2026-02-10 09:15:24,483 - Knowledge - INFO - Prompt tokens: 302484
+2026-02-10 09:15:24,663 - Knowledge - INFO - Completion tokens: 44557
+2026-02-10 09:15:24,814 - Knowledge - INFO - Updating org costs, total cost: 0.048071200000000015
+2026-02-10 09:15:25,003 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 268, Duration: 0ms
+2026-02-10 09:15:25,229 - Knowledge - INFO - Saving knowledge to Redis...
+2026-02-10 09:15:25,660 - Knowledge - INFO - Knowledge saved to Redis successfully
