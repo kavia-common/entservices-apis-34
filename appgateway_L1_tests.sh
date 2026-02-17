@@ -25,7 +25,17 @@ set -euo pipefail
 # -----------------------------------------------------------------------------
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_DIR="${SCRIPT_DIR}"
+# Resolve to the physical path (no symlinks). This matters because the user-facing
+# alias checkout path must be a *real directory* containing real Thunder/ThunderTools.
+REPO_DIR="$(cd "${SCRIPT_DIR}" && pwd -P)"
+
+# Fail fast if Thunder/ThunderTools are symlinks. The subtask requires they exist
+# as real directories under the alias repo directory.
+if [[ -L "${REPO_DIR}/Thunder" || -L "${REPO_DIR}/ThunderTools" ]]; then
+  echo "ERROR: Thunder and/or ThunderTools are symlinks under: ${REPO_DIR}" >&2
+  echo "       Replace them with real directories (e.g., clone/copy into place) and re-run." >&2
+  exit 2
+fi
 
 # Adjust if your umbrella workspace is elsewhere.
 WORKSPACE_ROOT_DEFAULT="/home/kavia/workspace/code-generation"
