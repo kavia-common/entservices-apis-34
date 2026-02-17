@@ -422,21 +422,22 @@ fi
 # Step 14: Apply patches Thunder
 # -----------------------------------------------------------------------------
 log "[Step 14] Apply patches Thunder"
+
+# Authoritative patch list per user_input_ref attachment:
+# Apply ONLY these patches to Thunder/ (no extra patches):
+#   - 1004-Add-support-for-project-dir.patch
+#   - 00010-R4.4-Add-support-for-project-dir.patch
+#
+# Non-interactive/best-effort behavior:
+#   - patch -N: don't reapply if already applied
+#   - failures are logged but do not abort the whole script
 if [[ -d "${TESTFW_DIR}/patches" ]]; then
-  # Apply the set of patches indicated by the workflow (as provided in repo).
-  # Best-effort: patch -N will skip if already applied.
-  for p in \
-    "1004-Add-support-for-project-dir.patch" \
-    "FirmwareUpdate_UptoDate.patch" \
-    "Firmware_postFlash.patch" \
-    "Jsonrpc_dynamic_error_handling.patch" \
-    "Maintenancemanager.patch" \
-    "Networkmanager.patch" \
-    "RDKEMW-1007.patch" \
-    "RDKEMW-733-Add-ENTOS-IDS.patch" \
-    "Use_Legact_Alt_Based_On_ThunderTools_R4.4.3.patch" \
-    "error_code_R4_4.patch"
-  do
+  THUNDER_PATCHES=(
+    "1004-Add-support-for-project-dir.patch"
+    "00010-R4.4-Add-support-for-project-dir.patch"
+  )
+
+  for p in "${THUNDER_PATCHES[@]}"; do
     if [[ -f "${TESTFW_DIR}/patches/${p}" ]]; then
       run_best_effort "Thunder patch ${p}" apply_patch_dir "${THUNDER_DIR}" "${TESTFW_DIR}/patches/${p}" "-p1"
     else
