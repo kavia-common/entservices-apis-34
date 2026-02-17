@@ -28,9 +28,18 @@ REPO_DIR="${SCRIPT_DIR}"
 WORKSPACE_ROOT_DEFAULT="/home/kavia/workspace/code-generation"
 WORKSPACE_ROOT="${WORKSPACE_ROOT:-${WORKSPACE_ROOT_DEFAULT}}"
 
-# Expected sibling repo directories (under WORKSPACE_ROOT)
-THUNDER_DIR="${THUNDER_DIR:-${WORKSPACE_ROOT}/Thunder}"
-THUNDERTOOLS_DIR="${THUNDERTOOLS_DIR:-${WORKSPACE_ROOT}/ThunderTools}"
+# Expected sibling repo directories.
+#
+# Prefer repo-local Thunder/ThunderTools (inside this repo dir) to satisfy
+# environments where the user expects Thunder/ThunderTools to appear under
+# entservices-appgateway checkout. Still allow overrides via env vars.
+THUNDER_DIR_DEFAULT="${REPO_DIR}/Thunder"
+THUNDERTOOLS_DIR_DEFAULT="${REPO_DIR}/ThunderTools"
+
+THUNDER_DIR="${THUNDER_DIR:-${THUNDER_DIR_DEFAULT}}"
+THUNDERTOOLS_DIR="${THUNDERTOOLS_DIR:-${THUNDERTOOLS_DIR_DEFAULT}}"
+
+# Other repos are still expected at WORKSPACE_ROOT unless overridden.
 TESTFW_DIR="${TESTFW_DIR:-${WORKSPACE_ROOT}/entservices-testframework}"
 APIS_DIR="${APIS_DIR:-${WORKSPACE_ROOT}/entservices-apis}"
 GTEST_DIR="${GTEST_DIR:-${WORKSPACE_ROOT}/googletest}"
