@@ -12,13 +12,16 @@ set -euo pipefail
 # Key goals:
 #   - Mirror the 16 workflow steps and log them clearly.
 #   - Be non-interactive (apt, git).
-#   - Best-effort for checkouts if repos already exist.
+#   - If Thunder/ThunderTools are missing, clone them into THIS repo directory
+#     (entservices-appgateway) and checkout required tags/branches.
+#   - Keep subsequent steps using these repo-local paths (not sibling workspace paths).
 #
 # Workspace/layout note:
 #   GitHub workflow assumes sibling repos:
 #     Thunder/, ThunderTools/, entservices-testframework/, entservices-apis/, googletest/
 #   next to entservices-appgateway (this repo).
-#   This script will look in /home/kavia/workspace/code-generation by default.
+#   This script uses /home/kavia/workspace/code-generation by default for non-Thunder repos,
+#   but ALWAYS prefers repo-local Thunder/ThunderTools unless overridden via env vars.
 # -----------------------------------------------------------------------------
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -28,8 +31,10 @@ REPO_DIR="${SCRIPT_DIR}"
 WORKSPACE_ROOT_DEFAULT="/home/kavia/workspace/code-generation"
 WORKSPACE_ROOT="${WORKSPACE_ROOT:-${WORKSPACE_ROOT_DEFAULT}}"
 
-# Expected sibling repo directories.
-#
+# Expected Thunder versions per workflow guidance
+THUNDER_REF_REQUIRED="R4.4.1"
+THUNDERTOOLS_REF_REQUIRED="R4.4.3"
+
 # Prefer repo-local Thunder/ThunderTools (inside this repo dir) to satisfy
 # environments where the user expects Thunder/ThunderTools to appear under
 # entservices-appgateway checkout. Still allow overrides via env vars.
@@ -98,35 +103,6 @@ git_noninteractive_env() {
   export GIT_ASKPASS=/bin/false
 }
 
-ensure_repo() {
-  # Ensure a git repo exists at $1. If missing, clone $2 at ref $3 (branch/tag).
-  # Usage: ensure_repo /path https://url ref
-  local dir="$1"
-  local url="$2"
-  local ref="$3"
-
-  if [[ -d "${dir}/.git" || -f "${dir}/CMakeLists.txt" ]]; then
-    log "Repo present: ${dir}"
-    return 0
-  fi
-
-  if ! have_cmd git; then
-    warn "git not available; cannot clone ${url} into ${dir}."
-    return 1
-  fi
-
-  git_noninteractive_env
-
-  log "Cloning ${url} -> ${dir} (ref: ${ref})"
-  mkdir -p "$(dirname "${dir}")"
-  rm -rf "${dir}"
-  if ! git clone --depth 1 --branch "${ref}" "${url}" "${dir}"; then
-    warn "Clone failed for ${url} (non-fatal if repo is already available elsewhere)."
-    return 1
-  fi
-  return 0
-}
-
 ensure_symlink_layout() {
   # Workflow expects entservices-appgateway/ at workspace root.
   # If our repo dir isn't that path, create a symlink.
@@ -141,6 +117,97 @@ ensure_symlink_layout() {
   fi
   log "Creating symlink for workflow layout: ${expected} -> ${REPO_DIR}"
   ln -s "${REPO_DIR}" "${expected}"
+}
+
+ensure_git_checkout_ref() {
+  # Ensure that a git repo at dir is checked out to the requested ref (tag/branch).
+  # This is best-effort and non-interactive:
+  # - Attempts fetch (tags) if possible
+  # - Checks out detached HEAD at tag/branch when available
+  #
+  # Usage: ensure_git_checkout_ref /path/to/repo R4.4.1
+  local dir="$1"
+  local ref="$2"
+
+  if [[ ! -d "${dir}/.git" ]]; then
+    warn "Not a git repo: ${dir} (cannot checkout ${ref})"
+    return 1
+  fi
+  if ! have_cmd git; then
+    warn "git not available; cannot checkout ${ref} in ${dir}"
+    return 1
+  fi
+
+  git_noninteractive_env
+
+  (
+    cd "${dir}"
+
+    # Fetch tags/updates best-effort; do not fail the whole function.
+    git fetch --tags --prune --quiet 2>/dev/null || true
+
+    # If ref exists as tag or remote branch, checkout it.
+    if git rev-parse -q --verify "refs/tags/${ref}" >/dev/null 2>&1; then
+      git checkout -q -f "tags/${ref}" || return 1
+      return 0
+    fi
+
+    if git show-ref -q --verify "refs/heads/${ref}"; then
+      git checkout -q -f "${ref}" || return 1
+      return 0
+    fi
+
+    if git show-ref -q --verify "refs/remotes/origin/${ref}"; then
+      # Create/update local branch tracking origin/ref
+      git checkout -q -B "${ref}" "origin/${ref}" || return 1
+      return 0
+    fi
+
+    warn "Ref '${ref}' not found in ${dir}. Current ref: $(git describe --tags --always --dirty 2>/dev/null || git rev-parse --short HEAD 2>/dev/null || echo unknown)"
+    return 1
+  )
+}
+
+ensure_repo_clone_and_checkout() {
+  # Ensure a repo exists at dir. If missing, clone non-interactively into dir and checkout ref.
+  # If present, attempt to checkout ref (best-effort).
+  #
+  # Usage: ensure_repo_clone_and_checkout /path https://url R4.4.1
+  local dir="$1"
+  local url="$2"
+  local ref="$3"
+
+  if [[ -d "${dir}/.git" ]]; then
+    log "Repo present: ${dir}"
+    run_best_effort "Checkout ${ref} in ${dir}" ensure_git_checkout_ref "${dir}" "${ref}"
+    return 0
+  fi
+
+  if [[ -e "${dir}" && ! -d "${dir}" ]]; then
+    warn "Path exists but is not a directory: ${dir} (cannot clone ${url})"
+    return 1
+  fi
+
+  if ! have_cmd git; then
+    warn "git not available; cannot clone ${url} into ${dir}."
+    return 1
+  fi
+
+  git_noninteractive_env
+
+  log "Cloning ${url} -> ${dir} (then checkout ref: ${ref})"
+  mkdir -p "$(dirname "${dir}")"
+  rm -rf "${dir}"
+
+  # Clone best-effort (prefer shallow if ref is a branch; tags sometimes require full history).
+  # We'll do a normal clone to maximize chance of tag availability, but keep it non-interactive.
+  if ! git clone "${url}" "${dir}"; then
+    warn "Clone failed for ${url}."
+    return 1
+  fi
+
+  run_best_effort "Checkout ${ref} in ${dir}" ensure_git_checkout_ref "${dir}" "${ref}"
+  return 0
 }
 
 apply_patch_dir() {
@@ -367,23 +434,24 @@ log "[Step 6] Build trower-base64"
 ) || true
 
 # -----------------------------------------------------------------------------
-# Step 7: Checkout Thunder (R4.4.1)
+# Step 7: Checkout Thunder (R4.4.1) - CLONE INTO REPO DIR IF MISSING
 # -----------------------------------------------------------------------------
-log "[Step 7] Checkout Thunder (Ensure Thunder/ exists at R4.4.1)"
-ensure_repo "${THUNDER_DIR}" "https://github.com/rdkcentral/Thunder.git" "R4.4.1" || true
+log "[Step 7] Checkout Thunder (Ensure ${THUNDER_DIR} exists at ${THUNDER_REF_REQUIRED})"
+ensure_repo_clone_and_checkout "${THUNDER_DIR}" "https://github.com/rdkcentral/Thunder.git" "${THUNDER_REF_REQUIRED}" || true
 
 # -----------------------------------------------------------------------------
-# Step 8: Checkout ThunderTools (R4.4.3)
+# Step 8: Checkout ThunderTools (R4.4.3) - CLONE INTO REPO DIR IF MISSING
 # -----------------------------------------------------------------------------
-log "[Step 8] Checkout ThunderTools (Ensure ThunderTools/ exists at R4.4.3)"
-ensure_repo "${THUNDERTOOLS_DIR}" "https://github.com/rdkcentral/ThunderTools.git" "R4.4.3" || true
+log "[Step 8] Checkout ThunderTools (Ensure ${THUNDERTOOLS_DIR} exists at ${THUNDERTOOLS_REF_REQUIRED})"
+ensure_repo_clone_and_checkout "${THUNDERTOOLS_DIR}" "https://github.com/rdkcentral/ThunderTools.git" "${THUNDERTOOLS_REF_REQUIRED}" || true
 
 # -----------------------------------------------------------------------------
 # Step 9: Checkout entservices-testframework (develop)
 # -----------------------------------------------------------------------------
 log "[Step 9] Checkout entservices-testframework (Ensure exists: develop)"
 # Repo URL may differ in your environment; if already present, this is skipped.
-ensure_repo "${TESTFW_DIR}" "https://github.com/rdkcentral/entservices-testframework.git" "develop" || true
+# (Kept as WORKSPACE_ROOT sibling by default.)
+ensure_repo_clone_and_checkout "${TESTFW_DIR}" "https://github.com/rdkcentral/entservices-testframework.git" "develop" || true
 
 # -----------------------------------------------------------------------------
 # Step 10: Checkout entservices-appgateway (this repo) / layout alignment
@@ -397,7 +465,7 @@ ensure_symlink_layout
 # Step 11: Checkout googletest (v1.15.0)
 # -----------------------------------------------------------------------------
 log "[Step 11] Checkout googletest (Ensure exists at v1.15.0)"
-ensure_repo "${GTEST_DIR}" "https://github.com/google/googletest.git" "v1.15.0" || true
+ensure_repo_clone_and_checkout "${GTEST_DIR}" "https://github.com/google/googletest.git" "v1.15.0" || true
 
 # -----------------------------------------------------------------------------
 # Step 12: Apply patches ThunderTools
@@ -432,7 +500,7 @@ fi
 # -----------------------------------------------------------------------------
 log "[Step 14] Apply patches Thunder"
 
-# Authoritative patch list per user_input_ref attachment:
+# Authoritative patch list per user input:
 # Apply ONLY these patches to Thunder/ (no extra patches):
 #   - 1004-Add-support-for-project-dir.patch
 #   - 00010-R4.4-Add-support-for-project-dir.patch
@@ -476,7 +544,7 @@ fi
 # -----------------------------------------------------------------------------
 log "[Step 16] Checkout entservices-apis (Ensure exists)"
 # Repo URL may differ in your environment; if already present, this is skipped.
-ensure_repo "${APIS_DIR}" "https://github.com/rdkcentral/entservices-apis.git" "develop" || true
+ensure_repo_clone_and_checkout "${APIS_DIR}" "https://github.com/rdkcentral/entservices-apis.git" "develop" || true
 
 # Workflow note: remove jsonrpc/DTV.json (best-effort).
 if [[ -f "${APIS_DIR}/jsonrpc/DTV.json" ]]; then
