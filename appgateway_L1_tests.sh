@@ -37,12 +37,12 @@ THUNDERTOOLS_REF_REQUIRED="R4.4.3"
 
 # Prefer repo-local Thunder/ThunderTools (inside this repo dir) to satisfy
 # environments where the user expects Thunder/ThunderTools to appear under
-# entservices-appgateway checkout. Still allow overrides via env vars.
-THUNDER_DIR_DEFAULT="${REPO_DIR}/Thunder"
-THUNDERTOOLS_DIR_DEFAULT="${REPO_DIR}/ThunderTools"
-
-THUNDER_DIR="${THUNDER_DIR:-${THUNDER_DIR_DEFAULT}}"
-THUNDERTOOLS_DIR="${THUNDERTOOLS_DIR:-${THUNDERTOOLS_DIR_DEFAULT}}"
+# entservices-appgateway checkout.
+#
+# NOTE: Per task requirement, we ALWAYS use ./Thunder and ./ThunderTools paths
+# (no env override), to prevent accidental usage of external/symlinked copies.
+THUNDER_DIR="${REPO_DIR}/Thunder"
+THUNDERTOOLS_DIR="${REPO_DIR}/ThunderTools"
 
 # Other repos are still expected at WORKSPACE_ROOT unless overridden.
 TESTFW_DIR="${TESTFW_DIR:-${WORKSPACE_ROOT}/entservices-testframework}"
@@ -54,7 +54,9 @@ INSTALL_ROOT="${INSTALL_ROOT:-${WORKSPACE_ROOT}/install}"
 INSTALL_USR="${INSTALL_ROOT}/usr"
 
 # Central build output dir
-BUILD_ROOT="${BUILD_ROOT:-${WORKSPACE_ROOT}/build}"
+# Default to a repo-local build directory to avoid CMakeCache.txt conflicts
+# when other Thunder/ThunderTools sources exist elsewhere under WORKSPACE_ROOT.
+BUILD_ROOT="${BUILD_ROOT:-${REPO_DIR}/.build}"
 
 log() { echo "==> $*"; }
 warn() { echo "WARNING: $*" >&2; }
