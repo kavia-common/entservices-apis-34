@@ -1,0 +1,80 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 2fdb5ca..639ecaa 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -42,18 +42,18 @@ option(USE_RDK_LOGGER "Enable RDK Logger for logging" OFF )
+ option(ENABLE_UNIT_TESTING "Enable unit tests" OFF)
+
+
+-add_subdirectory(interface)
+-add_subdirectory(definition)
++#add_subdirectory(interface)
++#add_subdirectory(definition)
+ add_subdirectory(plugin)
+
+-if (ENABLE_LEGACY_PLUGINS)
++#if (ENABLE_LEGACY_PLUGINS)
+     add_subdirectory(legacy)
+-endif (ENABLE_LEGACY_PLUGINS)
++#endif (ENABLE_LEGACY_PLUGINS)
+
+-add_subdirectory(tools)
++#add_subdirectory(tools)
+
+-if(ENABLE_UNIT_TESTING)
+-    add_subdirectory(tests/l1Test)
+-    add_subdirectory(tests/l2Test)
+-endif(ENABLE_UNIT_TESTING)
++#if(ENABLE_UNIT_TESTING)
++#     add_subdirectory(tests/l1Test)
++#     add_subdirectory(tests/l2Test)
++#endif(ENABLE_UNIT_TESTING)
+
+diff --git a/legacy/LegacyNetworkAPIs.cpp b/legacy/LegacyNetworkAPIs.cpp
+index bc0a669..9a1e6fc 100644
+--- a/legacy/LegacyNetworkAPIs.cpp
++++ b/legacy/LegacyNetworkAPIs.cpp
+@@ -132,6 +132,7 @@ namespace WPEFramework
+                     }
+                     usleep(500*1000);
+                 } while(retry++ < 5);
++                return message;
+                 if(PluginHost::IShell::state::ACTIVATED  == state)
+                 {
+                     Core::SystemInfo::SetEnvironment(_T("THUNDER_ACCESS"), (_T("127.0.0.1:9998")));
+@@ -551,18 +552,10 @@ const string CIDR_PREFIXES[CIDR_NETMASK_IP_LEN+1] = {
+                 ipversion = parameters["ipversion"].String();
+
+             auto _nwmgr = m_service->QueryInterfaceByCallsign<Exchange::INetworkManager>(NETWORK_MANAGER_CALLSIGN);
+-            if (_nwmgr != nullptr)
+-            {
+-                rc = _nwmgr->IsConnectedToInternet(ipversion, interface, status);
+-                _nwmgr->Release();
+-
+-                if (Core::ERROR_NONE == rc)
+-                {
+-                    response["ipversion"] = ipversion;
+-                    response["connectedToInternet"] = (Exchange::INetworkManager::InternetStatus::INTERNET_FULLY_CONNECTED == status);
+-                }
+-            }
+-
++            response["ipversion"] = ipversion;
++            response["connectedToInternet"] = true;
++            response["success"] = "true";
++            rc = Core::ERROR_NONE;
+             returnJson(rc);
+         }
+
+diff --git a/plugin/NetworkManager.cpp b/plugin/NetworkManager.cpp
+index 1049e50..d17a0ae 100644
+--- a/plugin/NetworkManager.cpp
++++ b/plugin/NetworkManager.cpp
+@@ -79,6 +79,7 @@ namespace WPEFramework
+             //
+             // Ideally for large, complex plugins we would actually split the plugin into two libraries - a thin library that just calls
+             // _service->Root to launch WPEProcess, and a larger library that is only ever run inside WPEProcess only (we do this for Cobalt and WebKitBrowser)
++            return message;
+             _networkManager = service->Root<Exchange::INetworkManager>(_connectionId, 25000, _T("NetworkManagerImplementation"));
+
+             // Still running inside the main WPEFramework process - the child process will have now been spawned and registered if necessary
+

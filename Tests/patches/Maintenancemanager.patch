@@ -1,0 +1,54 @@
+diff --git a/MaintenanceManager/MaintenanceManager.cpp b/MaintenanceManager/MaintenanceManager.cpp
+index 2f66754..4e8ea50 100644
+--- a/MaintenanceManager/MaintenanceManager.cpp
++++ b/MaintenanceManager/MaintenanceManager.cpp
+@@ -332,6 +332,7 @@ namespace WPEFramework
+             Register("startMaintenance", &MaintenanceManager::startMaintenance, this);
+             Register("stopMaintenance", &MaintenanceManager::stopMaintenance, this);
+             Register("getMaintenanceMode", &MaintenanceManager::getMaintenanceMode, this);
++                       Register("getDeviceInitializationContext", &MaintenanceManager::getDeviceInitializationContext, this);
+
+             MaintenanceManager::m_task_map[task_names_foreground[TASK_RFC].c_str()] = false;
+             MaintenanceManager::m_task_map[task_names_foreground[TASK_SWUPDATE].c_str()] = false;
+@@ -593,8 +594,8 @@ namespace WPEFramework
+         bool MaintenanceManager::knowWhoAmI(string &activation_status)
+         {
+             bool success = false;
+-            const char *secMgr_callsign = "org.rdk.SecManager";
+-            const char *secMgr_callsign_ver = "org.rdk.SecManager.1";
++            const char *secMgr_callsign = "org.rdk.MaintenanceManager";
++            const char *secMgr_callsign_ver = "org.rdk.MaintenanceManager";
+             PluginHost::IShell::state state;
+             WPEFramework::JSONRPC::LinkType<WPEFramework::Core::JSON::IElement> *thunder_client = nullptr;
+
+@@ -2677,6 +2678,13 @@ namespace WPEFramework
+             MM_SEND_NOTIFY(EVT_ONMAINTENANCSTATUSCHANGE, params);
+ #endif
+         }
+-
++        uint32_t MaintenanceManager::getDeviceInitializationContext(const JsonObject& parameters, JsonObject& response)
++        {
++           uint32_t rc = Core::ERROR_NONE;
++                  MM_LOGINFO("Inside getDeviceInitializationContext");
++                  response["deviceInitializationContext"] = "test_context";
++           response["success"] = true;
++           return rc;
++        }
+     } /* namespace Plugin */
+ } /* namespace WPEFramework */
+diff --git a/MaintenanceManager/MaintenanceManager.h b/MaintenanceManager/MaintenanceManager.h
+index 282f9ad..f5dd7da 100644
+--- a/MaintenanceManager/MaintenanceManager.h
++++ b/MaintenanceManager/MaintenanceManager.h
+@@ -326,8 +326,10 @@ namespace WPEFramework
+             uint32_t startMaintenance(const JsonObject &parameters, JsonObject &response);
+             uint32_t stopMaintenance(const JsonObject &parameters, JsonObject &response);
+             uint32_t getMaintenanceMode(const JsonObject &parameters, JsonObject &response);
++            uint32_t getDeviceInitializationContext(const JsonObject &parameters, JsonObject &response);
+         }; /* end of MaintenanceManager service class */
+     } /* end of plugin */
+ } /* end of wpeframework */
+
+ #endif // MAINTENANCEMANAGER_H
++
+

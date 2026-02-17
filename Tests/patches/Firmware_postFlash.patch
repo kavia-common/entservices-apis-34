@@ -1,0 +1,61 @@
+From 11736d462a75ee7813ea8309b304d9692255d946 Mon Sep 17 00:00:00 2001
+From: ramkumarpraba <Ramkumar_Prabaharan@comcast.com>
+Date: Wed, 23 Apr 2025 06:32:34 +0000
+Subject: [PATCH] RDK-55546 Add L1/L2 tests for FirmwareUpdate plugin
+
+---
+ plugin/FirmwareUpdateImplementation.cpp | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/plugin/FirmwareUpdateImplementation.cpp b/plugin/FirmwareUpdateImplementation.cpp
+index 103b498..cf188ad 100644
+--- a/plugin/FirmwareUpdateImplementation.cpp
++++ b/plugin/FirmwareUpdateImplementation.cpp
+@@ -184,7 +184,7 @@ namespace WPEFramework {
+             _adminLock.Unlock();
+         }
+ 
+-
++#if 0
+         /* Description:Use for do some action after flash complete successful
+          * @param: upgrade_file : Image file to be flash
+          * @param: reboot_flag : reboot action after flash
+@@ -332,7 +332,7 @@ namespace WPEFramework {
+             }
+             return 0;
+         }
+-
++#endif
+         /* Description:Use for Flashing the image
+          * @param: server_url : server url
+          * @param: upgrade_file : Image file to be flash
+@@ -513,7 +513,7 @@ namespace WPEFramework {
+                 }	
+                 else
+                 {
+-                    postFlash(maint, file+1, upgrade_type, reboot_flag ,initiated_type);
++                    //postFlash(maint, file+1, upgrade_type, reboot_flag ,initiated_type);
+                     dispatchAndUpdateEvent(_FLASHING_SUCCEEDED,"");
+                 }
+ 
+@@ -1165,7 +1165,7 @@ int read_RFCProperty(char* type, const char* key, char *out_value, size_t datasi
+     return ret;
+ }
+ 
+-
++#if 0
+ /* Description: Writing rfc data
+  * @param type : rfc type
+  * @param key: rfc key
+@@ -1325,7 +1325,7 @@ string deviceSpecificRegexPath(){
+             });
+     return result;
+ }
+-
++#endif
+ bool createDirectory(const std::string &path) {
+     struct stat st = {0};
+     // Check if the directory exists
+-- 
+2.17.1
+
